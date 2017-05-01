@@ -1,6 +1,6 @@
 # jsonresume-theme-elite
 
-Elite resume for jsonresume
+Elite resume for [jsonresume](https://jsonresume.org/)
 
 ## Installation
 
@@ -18,4 +18,4 @@ npm start
 ## Credits
 
 + Author: Ignacio Velazquez <ivelazquez85@gmail.com>
-+ Dev setup based on the amazing (Caffeine theme)[https://github.com/kelyvin/jsonresume-theme-caffeine]
++ Dev setup based on the amazing [Caffeine theme](https://github.com/kelyvin/jsonresume-theme-caffeine)
