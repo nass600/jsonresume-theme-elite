@@ -1,0 +1,34 @@
+<section class="section-contact">
+    <ul>
+        {{#if resume.basics.email}}
+        <li class="icon-item clearfix">
+            <i class="el-envelope"></i>
+            <span class="text-secondary">{{resume.basics.email}}</span>
+        </li>
+        {{/if}}
+        {{#if resume.basics.phone}}
+        <li class="icon-item clearfix">
+            <i class="el-phone"></i>
+            <span class="text-secondary">{{resume.basics.phone}}</span>
+        </li>
+        {{/if}}
+        {{#if resume.basics.website}}
+        <li class="icon-item clearfix">
+            <i class="el-link"></i>
+            <a class="text-secondary" href="{{resume.basics.website}}">
+                {{removeSchema resume.basics.website}}
+            </a>
+        </li>
+        {{/if}}
+        {{#if resume.basics.profiles.length}}
+            {{#each resume.basics.profiles}}
+            <li class="icon-item clearfix">
+                <i class="el-{{lowercase network}}"></i>
+                <a class="text-secondary" href="{{url}}">
+                    {{removeSchema url}}
+                </a>
+            </li>
+            {{/each}}
+        {{/if}}
+    </ul>
+</section>

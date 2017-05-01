@@ -1,0 +1,30 @@
+
+// Utilities
+// ----------------------------------------------
+
+.text-primary {
+    color: $color-primary;
+}
+
+.text-secondary {
+    color: $color-secondary;
+}
+
+.text-base {
+    color: $text-base;
+}
+
+.img-lang {
+    max-width: 2rem;
+    height: auto;
+}
+
+.icon-item {
+    i, span, a {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    span, a {
+        margin-left: .3rem;
+    }
+}

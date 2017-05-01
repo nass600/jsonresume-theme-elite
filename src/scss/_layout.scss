@@ -1,0 +1,114 @@
+// Layout
+// ----------------------------------------------
+
+body {
+    margin: 4rem 0;
+    background-color: $body-bg;
+}
+
+.page {
+    background: white;
+    width: $page-width;
+    min-height: $page-height;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+}
+
+.sidebar {
+    background-color: $sidebar-color;
+    color: $text-base;
+
+    .avatar {
+        width: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 1rem auto 2rem;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .name {
+        margin: 2rem auto;
+    }
+
+    hr {
+        border-color: lighten($sidebar-color, 10%);
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+[class^="section-"] {
+    padding: 1rem;
+
+    & + [class^="section-"] .title {
+        margin-top: 0;
+    }
+}
+
+[class^="section-"] .title {
+    color: $color-primary;
+    text-transform: uppercase;
+    margin: 1rem 0;
+
+    .title-icon,
+    span
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    span {
+        margin-left: 2px;
+    }
+
+    .title-icon {
+        $icon-bg-size: 2rem;
+        background-color: lighten($gray-lighter, 2%);
+        border-radius: 50%;
+        position: relative;
+        width: $icon-bg-size;
+        height: $icon-bg-size;
+        padding: 0.42rem;
+    }
+}
+
+.section-basic {
+    text-align: center;
+}
+
+.section-contact {
+    width: 204px;
+
+    li {
+        font-size: .7rem;
+        position: relative;
+
+        i {
+            color: $color-primary;
+            font-size: 0.9rem;
+            float: left;
+            width: 22px;
+        }
+
+        span,
+        a
+        {
+            //display: inline-block;
+            word-wrap: break-word;
+            line-height: 21px;
+            margin-left: 0;
+            float: left;
+            width: 148px;
+        }
+    }
+
+    li + li {
+        margin-top: .4rem;
+    }
+}

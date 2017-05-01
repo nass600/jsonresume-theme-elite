@@ -1,0 +1,102 @@
+
+// Cards
+// ----------------------------------------------
+
+.card {
+    margin: 0 (-$card-spacer-x);
+
+    & + .card {
+        margin-top:  1rem;
+    }
+}
+
+.card-header {
+    padding: 0 $card-spacer-x 0;
+
+    .card-dates {
+        color: $color-secondary;
+        display: inline-block;
+    }
+    .badge {
+        vertical-align: text-top;
+        margin-left: .25rem;
+    }
+}
+
+.card-block {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+    .card-title {
+        text-transform: uppercase;
+    }
+
+    .card-subtitle {
+        color: $color-secondary;
+    }
+
+    ul li {
+        padding-left: 1rem;
+        text-align: justify;
+        color: $body-color;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: .75rem;
+            content: ">";
+            margin-left: -.75rem;
+            width: 1rem;
+            display: inline-block;
+            color: $color-primary;
+        }
+    }
+}
+
+.card-footer {
+    padding: 0 $card-spacer-x $card-spacer-x;
+
+    i {
+        color: $color-primary;
+    }
+
+    .card-link {
+        display: block;
+    }
+
+    .card-highlights {
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-link + .card-highlights {
+        margin-top: .5rem;
+    }
+
+    .card-link + .tag-list {
+        margin-top: .25rem;
+    }
+
+    .tag-list {
+        position: relative;
+
+        i {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .tag-items {
+            margin-left: 1rem;
+        }
+        span {
+            margin-left: 0;
+        }
+        span:after {
+            content: ",";
+        }
+        span:last-of-type:after {
+            content: '';
+        }
+    }
+}

@@ -1,0 +1,71 @@
+// Variables
+// ----------------------------------------------
+
+// Fonts
+
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+$elite-font-path: "../fonts" !default;
+
+$el-trophy: "\e901";
+$el-hand-up: "\e0d4";
+$el-beer: "\e15d";
+$el-book: "\e156";
+$el-calendar: "\e14b";
+$el-comments-alt: "\e125";
+$el-envelope: "\e10e";
+$el-thumbs-up: "\e027";
+$el-tasks: "\e031";
+$el-tags: "\e032";
+$el-suitcase: "\e038";
+$el-pushpin: "\e07f";
+$el-phone: "\e08b";
+$el-link: "\e0b9";
+$el-paperclip: "\e093";
+$el-twitter: "\e01a";
+$el-youtube: "\e003";
+$el-stackoverflow: "\e046";
+$el-skype: "\e054";
+$el-instagram: "\e0c6";
+$el-linkedin: "\e0b6";
+$el-pinterest: "\e089";
+$el-google-plus: "\e0da";
+$el-github: "\e0e1";
+$el-facebook: "\e102";
+$el-dribbble: "\e115";
+$el-bitbucket: "\e159";
+
+
+// Font Sizes
+
+$font-family-sans-serif: 'Maven Pro', sans-serif !default;
+
+$font-size-base: 0.668rem;
+$font-size-h1: 1.3rem;
+$font-size-h2: 1.15rem;
+$font-size-h3: 0.8rem;
+$font-size-h4: 0.8rem;
+$font-size-h5: 0.8rem;
+
+$sidebar-color: #242324;
+$color-primary: #d9534f;
+$brand-primary: $color-primary;
+$color-secondary: #8a979e;
+$text-base: white;
+$body-bg: #424546;
+$gray-lighter:              #eceeef !default;
+
+$card-border-width: 0;
+$card-spacer-x: 1rem;
+$card-cap-bg: transparent;
+
+$table-cell-padding: .5rem !default;
+
+$print-width: 21cm;
+$print-height: 29.7cm;
+
+$page-width: 612px;
+$page-height: 792px;
+
+$sidebar-width: 180px;
+

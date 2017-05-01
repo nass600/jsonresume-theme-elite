@@ -1,0 +1,63 @@
+{
+  "name": "jsonresume-theme-elite",
+  "version": "1.0.0",
+  "description": "Elite theme for JSONResume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp && gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nass600/jsonresume-theme-elite.git"
+  },
+  "keywords": [
+    "jsonresume",
+    "jsonresume-theme"
+  ],
+  "author": "Ignacio Velazquez <ivelazquez85@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nass600/jsonresume-theme-elite/issues"
+  },
+  "homepage": "https://github.com/nass600/jsonresume-theme-elite#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssimport": "^5.0.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.0.0",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-wrap": "^0.13.0",
+    "jshint-stylish": "^2.2.1",
+    "lazypipe": "^1.0.1",
+    "opn": "^4.0.2",
+    "require-dir": "^0.3.1",
+    "serve-index": "^1.8.0",
+    "yargs": "^6.6.0"
+  },
+  "dependencies": {
+    "address-format": "0.0.3",
+    "bootstrap": "^4.0.0-alpha.6",
+    "handlebars": "^4.0.5",
+    "handlebars-wax": "^4.0.0",
+    "moment": "^2.17.1",
+    "resume-cli": "^0.4.19",
+    "swag": "^0.7.0"
+  }
+}

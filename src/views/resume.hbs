@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+    <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+    <style>
+        {{{css}}}
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 sidebar">
+                <div class="row">
+                {{> basic }}
+                <hr>
+                {{> contact }}
+                </div>
+            </div>
+            <div class="col-8">
+                {{> summary }}
+                {{> work }}
+                {{> education }}
+                {{> awards }}
+                {{> publications }}
+                {{> volunteer }}
+                {{> skills }}
+                {{> languages }}
+                {{> interests }}
+                {{> references }}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

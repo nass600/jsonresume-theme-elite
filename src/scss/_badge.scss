@@ -1,0 +1,17 @@
+
+// Badges
+// ----------------------------------------------
+
+.badge-outline-secondary {
+    @include badge-outline-variant($color-secondary);
+}
+
+.badge-outline-success {
+    @include badge-outline-variant($badge-success-bg);
+}
+
+.badge-secondary {
+    @include badge-variant(lighten($color-secondary, 20%));
+    border-radius: 0;
+    border: 0;
+}

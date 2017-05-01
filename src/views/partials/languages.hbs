@@ -1,0 +1,26 @@
+{{#if resume.languages.length}}
+    <section class="section-languages">
+        {{>title icon='el-comments-alt' title='Languages'}}
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Language</th>
+                <th>Level</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each resume.languages}}
+                <tr>
+                    <td>
+                        <div class="flag flag-{{lowercase name}}"></div>
+                    </td>
+                    <td>
+                        {{level}}
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </section>
+{{/if}}
