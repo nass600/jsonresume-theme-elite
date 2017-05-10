@@ -20,15 +20,29 @@
             </a>
         </li>
         {{/if}}
-        {{#if resume.basics.profiles.length}}
+        {{#if resume.basics.location}}
+        <li class="icon-item clearfix">
+            <i class="el-map-marker"></i>
+            <span class="text-secondary">
+                {{resume.basics.location.address}}
+                {{resume.basics.location.postalCode}}
+                {{resume.basics.location.city}}
+                {{resume.basics.location.region}}
+                {{resume.basics.location.countryCode}}
+            </span>
+        </li>
+        {{/if}}
+    </ul>
+    {{#if resume.basics.profiles.length}}
+        <ul>
             {{#each resume.basics.profiles}}
             <li class="icon-item clearfix">
-                <i class="el-{{lowercase network}}"></i>
+                <i class="el-{{sanitizeLowercase network}}"></i>
                 <a class="text-secondary" href="{{url}}">
                     {{removeSchema url}}
                 </a>
             </li>
             {{/each}}
-        {{/if}}
-    </ul>
+        </ul>
+    {{/if}}
 </section>

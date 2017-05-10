@@ -2,10 +2,9 @@
 
 const gulp = require('gulp')
 const exec = require('child_process').exec
-const config = require('../../config')
 
-gulp.task('resume', function (cb) {
-  let command = `resume serve --silent -d ${config.paths.dist.dir}`
+gulp.task('unlink', function (cb) {
+  let command = 'npm unlink'
 
   exec(command, function (err, stdout, stderr) {
     console.log(stdout)

@@ -2,113 +2,139 @@
 // ----------------------------------------------
 
 body {
-    margin: 4rem 0;
-    background-color: $body-bg;
+  margin: 4rem 0;
+  background-color: $background-bg;
 }
 
 .page {
-    background: white;
-    width: $page-width;
-    min-height: $page-height;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
-}
+  background: $page-bg;
+  width: $page-width;
+  min-height: $page-height;
+  display: flex;
+  margin: 0 auto;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 
-.sidebar {
-    background-color: $sidebar-color;
-    color: $text-base;
-
-    .avatar {
-        width: 50%;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 1rem auto 2rem;
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    }
-
-    .name {
-        margin: 2rem auto;
-    }
+  .sidebar {
+    background-color: $sidebar-bg;
+    color: $sidebar-color;
+    flex: 0 0 $sidebar-width;
 
     hr {
-        border-color: lighten($sidebar-color, 10%);
-        width: 100%;
-        margin-left: 1rem;
-        margin-right: 1rem;
+      border-color: lighten($sidebar-bg, 10%);
+      margin-left: $spacer;
+      margin-right: $spacer;
     }
+
+    [class^="section-"] {
+      padding: $spacer;
+    }
+  }
+
+  .content {
+    flex: 0 0 $content-width;
+  }
 }
 
 [class^="section-"] {
-    padding: 1rem;
-
-    & + [class^="section-"] .title {
-        margin-top: 0;
-    }
+  width: 100%;
 }
 
 [class^="section-"] .title {
-    color: $color-primary;
-    text-transform: uppercase;
-    margin: 1rem 0;
+  color: $color-primary;
+  text-transform: uppercase;
+  padding: $spacer $spacer 0;
+  margin: 0;
 
-    .title-icon,
-    span
-    {
-        display: inline-block;
-        vertical-align: middle;
-    }
+  .title-icon,
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-    span {
-        margin-left: 2px;
-    }
+  span {
+    margin-left: 2px;
+  }
 
-    .title-icon {
-        $icon-bg-size: 2rem;
-        background-color: lighten($gray-lighter, 2%);
-        border-radius: 50%;
-        position: relative;
-        width: $icon-bg-size;
-        height: $icon-bg-size;
-        padding: 0.42rem;
+  .title-icon {
+    $icon-bg-size: 2rem;
+
+    background-color: lighten($gray-lighter, 2%);
+    border-radius: 50%;
+    width: $icon-bg-size;
+    height: $icon-bg-size;
+    padding: 0.4rem;
+  }
+}
+
+.section-summary {
+  p {
+    text-align: justify;
+    margin-bottom: 0;
+
+    & + p {
+      margin-top: $font-size-base;
     }
+  }
+}
+
+.section-skills {
+  .card + .card {
+    padding-top: 0;
+  }
 }
 
 .section-basic {
-    text-align: center;
+  text-align: center;
+
+  .avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 1rem auto 2rem;
+    width: $avatar-size;
+    height: $avatar-size;
+    background-color: darken($sidebar-bg, 5%);
+
+    img {
+      width: $avatar-size;
+      height: $avatar-size;
+    }
+  }
+
+  .name {
+    margin: 2rem auto;
+  }
 }
 
 .section-contact {
-    width: 204px;
+  $icon-width: 20px;
 
-    li {
-        font-size: .7rem;
-        position: relative;
+  ul + ul {
+    margin-top: 3rem;
+  }
 
-        i {
-            color: $color-primary;
-            font-size: 0.9rem;
-            float: left;
-            width: 22px;
-        }
+  li {
+    font-size: 0.7rem;
+    position: relative;
 
-        span,
-        a
-        {
-            //display: inline-block;
-            word-wrap: break-word;
-            line-height: 21px;
-            margin-left: 0;
-            float: left;
-            width: 148px;
-        }
+    i {
+      color: $color-primary;
+      font-size: 0.8rem;
+      float: left;
+      width: $icon-width;
     }
 
-    li + li {
-        margin-top: .4rem;
+    span,
+    a {
+      color: $color-secondary;
+      word-wrap: break-word;
+      line-height: 19px;
+      margin-left: 0;
+      float: left;
+      width: $sidebar-width - ($spacer * 2) - $icon-width;
     }
+  }
+
+  li + li {
+    margin-top: 0.5rem;
+  }
 }

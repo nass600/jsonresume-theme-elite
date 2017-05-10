@@ -9,30 +9,24 @@
     </style>
 </head>
 <body>
-<div class="page">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 sidebar">
-                <div class="row">
-                {{> basic }}
-                <hr>
-                {{> contact }}
-                </div>
-            </div>
-            <div class="col-8">
-                {{> summary }}
-                {{> work }}
-                {{> education }}
-                {{> awards }}
-                {{> publications }}
-                {{> volunteer }}
-                {{> skills }}
-                {{> languages }}
-                {{> interests }}
-                {{> references }}
-            </div>
+    <div class="page">
+        <div class="sidebar">
+            {{> basic }}
+            <hr>
+            {{> contact }}
+        </div>
+        <div class="content">
+            {{> summary }}
+            {{> work }}
+            {{> education }}
+            {{> awards }}
+            {{> publications }}
+            {{> volunteer }}
+            {{> skills }}
+            {{> languages }}
+            {{> interests }}
+            {{> references }}
         </div>
     </div>
-</div>
 </body>
 </html>

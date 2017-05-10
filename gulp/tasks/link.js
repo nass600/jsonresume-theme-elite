@@ -1,11 +1,8 @@
-'use strict'
-
 const gulp = require('gulp')
 const exec = require('child_process').exec
-const config = require('../../config')
 
-gulp.task('resume', function (cb) {
-  let command = `resume serve --silent -d ${config.paths.dist.dir}`
+gulp.task('link', function (cb) {
+  let command = 'npm link'
 
   exec(command, function (err, stdout, stderr) {
     console.log(stdout)

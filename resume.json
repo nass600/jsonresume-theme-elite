@@ -6,7 +6,7 @@
         "email": "richard.hendriks@piedpiper.com",
         "phone": "(912) 555-4321",
         "website": "http://piedpiper.com",
-        "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. <br>While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
+        "summary": "<p>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer.</p><p>While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</p>",
         "location": {
             "address": "Newell Road",
             "postalCode": "94303",
@@ -21,14 +21,69 @@
                 "url": "https://twitter.com/siliconHBO"
             },
             {
+                "network": "Youtube",
+                "username": "HBO",
+                "url": "https://youtube.com/user/HBO"
+            },
+            {
+                "network": "Vimeo",
+                "username": "HBO",
+                "url": "https://vimeo.com/user/HBO"
+            },
+            {
                 "network": "Facebook",
                 "username": "SiliconHBO",
-                "url": "https://www.facebook.com/SiliconHBO"
+                "url": "https://facebook.com/SiliconHBO"
+            },
+            {
+                "network": "Google Plus",
+                "username": "SiliconHBO",
+                "url": "https://plus.google.com/SiliconHBO"
             },
             {
                 "network": "Instagram",
                 "username": "siliconhbo",
-                "url": "https://www.instagram.com/siliconhbo/"
+                "url": "https://instagram.com/siliconhbo/"
+            },
+            {
+                "network": "Tumblr",
+                "username": "hbo",
+                "url": "http://hbo.tumblr.com/"
+            },
+            {
+                "network": "Pinterest",
+                "username": "siliconhbo",
+                "url": "https://instagram.com/siliconhbo/"
+            },
+            {
+                "network": "Dribbble",
+                "username": "hbo",
+                "url": "http://dribbble.com/silicon-valley"
+            },
+            {
+                "network": "Xing",
+                "username": "hbo",
+                "url": "http://xing.com/silicon-valley"
+            },
+            {
+                "network": "Github",
+                "username": "hbo",
+                "url": "http://github.com/silicon-valley"
+            },
+            {
+                "network": "Bitbucket",
+                "username": "hbo",
+                "url": "http://bitbucket.org/silicon-valley"
+            },
+            {
+                "network": "Stackoverflow",
+                "username": "hbo",
+                "url": "http://stackoverflow.com/silicon-valley"
+            },
+            {
+                "network": "Skype",
+                "username": "hbo",
+                "url": "@hbo"
             }
         ]
     },
@@ -47,7 +102,8 @@
                 "iOS",
                 "Scrum",
                 "PostgreSQL",
-                "MongoDB"
+                "MongoDB",
+                "Tabs"
             ]
         },
         {

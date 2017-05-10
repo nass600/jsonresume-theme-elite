@@ -1,10 +1,9 @@
-'use strict';
+'use strict'
 
-const
-    gulp = require('gulp'),
-    fs = require('fs'),
-    $ = require('gulp-load-plugins')();
+const gulp = require('gulp')
+const size = require('gulp-size')
+const config = require('../../config')
 
-gulp.task('build', ['styles', 'html', 'images', 'fonts', 'extras'], function () {
-    return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
-});
+gulp.task('build', ['lint', 'styles', 'html', 'images', 'fonts'], function () {
+  return gulp.src(config.paths.dist.all).pipe(size({title: 'build', gzip: true}))
+})

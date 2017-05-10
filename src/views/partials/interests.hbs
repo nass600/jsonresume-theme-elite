@@ -2,4 +2,27 @@
     <section class="section-interests">
         {{>title icon='el-beer' title='Interests'}}
     </section>
+    {{#each resume.interests}}
+        <div class="card">
+            {{#if name}}
+                <div class="card-block">
+                    <h4 class="card-title">
+                        {{name}}
+                    </h4>
+                </div>
+            {{/if}}
+            {{#if keywords.length}}
+                <div class="card-footer">
+                    <div class="card-tags" href="{{website}}">
+                        <i class="el-tags"></i>
+                        <div class="tag-list">
+                            {{#each keywords}}
+                                <span class="tag text-secondary">{{this}}</span>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+    {{/each}}
 {{/if}}

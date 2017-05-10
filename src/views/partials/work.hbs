@@ -29,18 +29,18 @@
                     </div>
                 {{/if}}
                 {{#or highlights.length website}}
-                    <div class="card-footer text-muted">
+                    <div class="card-footer">
                         {{#if website}}
-                            <a class="card-link icon-item text-secondary" href="{{website}}">
+                            <a class="card-link text-secondary" href="{{website}}">
                                 <i class="el-link"></i><span>{{website}}</span>
                             </a>
                         {{/if}}
                         {{#if highlights}}
-                        <div class="tag-list text-secondary" href="{{website}}">
+                        <div class="card-tags" href="{{website}}">
                             <i class="el-tags"></i>
-                            <div class="tag-items">
+                            <div class="tag-list">
                             {{#each highlights}}
-                                <span>{{this}}</span>
+                                <span class="tag text-secondary">{{this}}</span>
                             {{/each}}
                             </div>
                         </div>

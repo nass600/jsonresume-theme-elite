@@ -1,6 +1,7 @@
-'use strict';
+'use strict'
 
-const
-    gulp = require('gulp');
+const gulp = require('gulp')
+const del = require('del')
+const config = require('../../config')
 
-gulp.task('clean', require('del').bind(null, ['.sass-cache', 'dist']));
+gulp.task('clean', del.bind(null, [config.paths.styles.cache, config.paths.dist.dir]))

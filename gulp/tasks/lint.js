@@ -2,4 +2,4 @@
 
 const gulp = require('gulp')
 
-gulp.task('serve', ['resume', 'watch'])
+gulp.task('lint', ['eslint', 'stylelint'])
