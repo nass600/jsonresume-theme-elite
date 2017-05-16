@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp && gulp serve",
     "build": "gulp",
-    "export": "gulp export",
+    "export": "gulp export --page-format A4",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -65,7 +65,9 @@
     "bootstrap": "^4.0.0-alpha.6",
     "handlebars": "^4.0.5",
     "handlebars-wax": "^4.0.0",
+    "html-pdf": "^2.1.0",
     "moment": "^2.17.1",
+    "pluralize": "^4.0.0",
     "swag": "^0.7.0"
   }
 }

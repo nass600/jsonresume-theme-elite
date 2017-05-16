@@ -1,0 +1,8 @@
+web:
+  container_name: elite-web
+  build: .
+  ports:
+   - "4000:4000"
+  volumes:
+   - .:/usr/src/app/
+   - /usr/src/app/node_modules

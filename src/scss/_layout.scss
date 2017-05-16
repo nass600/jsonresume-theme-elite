@@ -9,7 +9,6 @@ body {
 .page {
   background: $page-bg;
   width: $page-width;
-  min-height: $page-height;
   display: flex;
   margin: 0 auto;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
@@ -18,20 +17,41 @@ body {
     background-color: $sidebar-bg;
     color: $sidebar-color;
     flex: 0 0 $sidebar-width;
-
-    hr {
-      border-color: lighten($sidebar-bg, 10%);
-      margin-left: $spacer;
-      margin-right: $spacer;
-    }
-
-    [class^="section-"] {
-      padding: $spacer;
-    }
   }
 
   .content {
-    flex: 0 0 $content-width;
+    flex: 1;
+  }
+}
+
+.sidebar {
+  hr {
+    border-color: lighten($sidebar-bg, 10%);
+    margin: 0 $spacer 0;
+  }
+
+  [class^="section-"] {
+    padding: $spacer;
+  }
+
+  [class^="section-"] .title {
+    padding: 0 0 $spacer;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    text-align: center;
+
+    .title-icon {
+      background-color: transparent;
+      padding: 0;
+      width: auto;
+      height: auto;
+      display: none;
+    }
+
+    span {
+      margin: 0;
+      color: $sidebar-color;
+    }
   }
 }
 
@@ -62,7 +82,7 @@ body {
     border-radius: 50%;
     width: $icon-bg-size;
     height: $icon-bg-size;
-    padding: 0.4rem;
+    padding: 0.4rem 0.45rem;
   }
 }
 
@@ -85,6 +105,7 @@ body {
 
 .section-basic {
   text-align: center;
+  background-color: darken($sidebar-bg, 5%);
 
   .avatar {
     border-radius: 50%;
@@ -101,7 +122,11 @@ body {
   }
 
   .name {
-    margin: 2rem auto;
+    margin: 2rem auto 1rem;
+  }
+
+  .subtitle {
+    margin-bottom: 1rem;
   }
 }
 
@@ -109,7 +134,7 @@ body {
   $icon-width: 20px;
 
   ul + ul {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   li {
@@ -135,6 +160,67 @@ body {
   }
 
   li + li {
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
+  }
+}
+
+@if $enable-skills-sidebar == true {
+  .sidebar .section-skills {
+    table {
+      width: 100%;
+
+      tr + tr td {
+        padding-top: 0.5rem;
+      }
+
+      td {
+        vertical-align: top;
+      }
+
+      .cell-progress {
+        width: 65px;
+      }
+    }
+
+    .skill {
+      @include clearfix;
+
+      .name {
+        text-transform: uppercase;
+        float: left;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .progress {
+    box-shadow: $progress-box-shadow;
+  }
+
+  .content .section-skills {
+    display: none;
+  }
+}
+
+.progress-dots {
+  $size: 10px;
+
+  display: inline-block;
+  float: right;
+  line-height: $size;
+
+  .dot {
+    width: $size;
+    height: $size;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid $color-secondary;
+    vertical-align: sub;
+
+    &.active {
+      box-shadow: none;
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+    }
   }
 }

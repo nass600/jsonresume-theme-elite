@@ -5,3 +5,5 @@ src
 .eslintrc.json
 gulpfile.js
 resume.json
+resume-sample.json
+gulp-cache

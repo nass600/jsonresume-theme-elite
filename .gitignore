@@ -1,7 +1,9 @@
 logs
 *.log
+resume.json
 npm-debug.log*
 node_modules/
 .npm
 .eslintcache
 dist
+gulp-cache

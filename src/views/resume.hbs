@@ -12,7 +12,6 @@
     <div class="page">
         <div class="sidebar">
             {{> basic }}
-            <hr>
             {{> contact }}
         </div>
         <div class="content">
@@ -28,5 +27,19 @@
             {{> references }}
         </div>
     </div>
+
+    <script>
+        var pageHeights = {
+          letter: 792,
+          a4: 842
+        }
+        var pageHeight = pageHeights['{{lowercase format}}']
+        var html = document.querySelector('.page')
+        var height = html.scrollHeight
+
+        if (height/pageHeight !== 0) {
+            html.style.height = (Math.ceil(height/pageHeight) * pageHeight) + 'px'
+        }
+    </script>
 </body>
 </html>

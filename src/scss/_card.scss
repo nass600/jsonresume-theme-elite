@@ -7,6 +7,7 @@
 
 .card-header {
   padding: 0 $spacer 0;
+  font-size: $font-size-h5;
 
   .card-dates {
     color: $color-secondary;
@@ -21,7 +22,6 @@
 
 .card-block {
   padding: $spacer/2 $spacer;
-  text-align: justify;
 
   .card-title {
     text-transform: uppercase;
@@ -36,21 +36,25 @@
     color: $color-secondary;
   }
 
-  ul li {
-    padding-left: 1rem;
+  .card-text {
     text-align: justify;
-    color: $body-color;
-    position: relative;
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0.75rem;
-      content: ">";
-      margin-left: -0.75rem;
-      width: 1rem;
-      display: inline-block;
-      color: $color-primary;
+    ul li {
+      padding-left: 1rem;
+      text-align: justify;
+      color: $body-color;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0.75rem;
+        content: ">";
+        margin-left: -0.75rem;
+        width: 1rem;
+        display: inline-block;
+        color: $color-primary;
+      }
     }
   }
 }

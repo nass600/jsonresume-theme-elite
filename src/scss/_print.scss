@@ -2,12 +2,11 @@
   html,
   body {
     margin: 0;
-    width: $page-width;
+    width: 100%;
   }
 
   .page {
-    width: $page-width;
-    height: 100%;
+    width: 100%;
     margin: 0;
     box-shadow: none;
   }
@@ -15,6 +14,7 @@
   .section-summary,
   .section-languages,
   .card,
+  .sidebar .section-skills,
   p {
     page-break-inside: avoid;
   }
@@ -31,7 +31,7 @@
   }
 
   .content {
-    -webkit-box-flex: 0 0 $content-width;
-    -webkit-flex: 0 0 $content-width;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
   }
 }

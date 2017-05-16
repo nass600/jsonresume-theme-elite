@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "6.9.5"
+branches:
+  only:
+    - master
+before_install:
+  - npm install -g gulp
+  - npm install -g resume-cli
+install:
+  - npm install
+before_script:
+  - npm link
+script:
+  - gulp
+  - resume test
+  - resume export test-resume.pdf --format pdf --theme elite
+  - rm test-resume.pdf
