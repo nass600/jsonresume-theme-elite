@@ -2,11 +2,23 @@
 // ----------------------------------------------
 
 .text-primary {
-  color: $color-primary;
+  .sidebar & {
+    color: $sidebar-primary !important;
+  }
+
+  .content & {
+    color: $page-primary !important;
+  }
 }
 
 .text-secondary {
-  color: $color-secondary;
+  .sidebar & {
+    color: $sidebar-secondary !important;
+  }
+
+  .content & {
+    color: $page-secondary !important;
+  }
 }
 
 .img-lang {

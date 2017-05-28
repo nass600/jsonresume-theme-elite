@@ -1,0 +1,106 @@
+// Sections
+// ----------------------------------------------
+
+.section-summary {
+  p {
+    text-align: justify;
+    margin-bottom: 0;
+
+    & + p {
+      margin-top: $font-size-base;
+    }
+  }
+}
+
+.content .section-skills {
+  .card + .card {
+    padding-top: 0;
+  }
+}
+
+.sidebar .section-skills {
+  table {
+    width: 100%;
+
+    tr + tr td {
+      padding-top: 0.5rem;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    .cell-progress {
+      width: 68px;
+    }
+  }
+
+  .skill {
+    @include clearfix;
+
+    .name {
+      text-transform: uppercase;
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.section-basic {
+  text-align: center;
+  background-color: darken($sidebar-bg, 5%);
+
+  .avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 1rem auto 2rem;
+    width: $avatar-size;
+    height: $avatar-size;
+    background-color: darken($sidebar-bg, 5%);
+
+    img {
+      width: $avatar-size;
+      height: $avatar-size;
+    }
+  }
+
+  .name {
+    margin: 2rem auto 1rem;
+  }
+
+  .subtitle {
+    margin-bottom: 1rem;
+  }
+}
+
+.section-contact {
+  $icon-width: 20px;
+
+  ul + ul {
+    margin-top: 2rem;
+  }
+
+  li {
+    font-size: 0.7rem;
+    position: relative;
+
+    i {
+      font-size: 0.8rem;
+      float: left;
+      width: $icon-width;
+    }
+
+    span,
+    a {
+      word-wrap: break-word;
+      line-height: 19px;
+      margin-left: 0;
+      float: left;
+      width: $sidebar-width - ($spacer * 2) - $icon-width;
+    }
+  }
+
+  li + li {
+    margin-top: 0.2rem;
+  }
+}

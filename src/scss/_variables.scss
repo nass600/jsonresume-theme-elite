@@ -5,6 +5,23 @@
 
 $enable-skills-sidebar: true;
 
+// Colors
+
+$background-bg: #424546;
+$color-primary: #d9534f;
+$color-secondary: #8a979e;
+$brand-primary: $color-primary;
+
+$page-bg: white;
+$page-color: #292b2c;
+$page-primary: $color-primary;
+$page-secondary: $color-secondary;
+
+$sidebar-bg: #242324;
+$sidebar-color: white;
+$sidebar-primary: $color-primary;
+$sidebar-secondary: $color-secondary;
+
 // Fonts
 
 @import url(https://fonts.googleapis.com/css?family=Maven+Pro);
@@ -60,16 +77,6 @@ $spacer: 16px;
 $sidebar-width: 190px;
 $avatar-size: 90px;
 
-// Colors
-
-$background-bg: #424546;
-$page-bg: white;
-$color-primary: #d9534f;
-$color-secondary: #8a979e;
-$sidebar-bg: #242324;
-$sidebar-color: white;
-$brand-primary: $color-primary;
-
 // Tables
 
 $table-cell-padding: 0.5rem;
@@ -79,7 +86,7 @@ $table-cell-padding: 0.5rem;
 $progress-border-radius: 0;
 $progress-bg: transparent;
 $progress-border-color: $color-secondary;
-$progress-box-shadow: inset 0 0 1px $color-secondary;
+$progress-box-shadow: none;
 $progress-height: 0.5rem;
 
 // Badges

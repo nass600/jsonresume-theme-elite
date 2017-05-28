@@ -1,0 +1,26 @@
+// Progress Bars
+// ------------------------------------
+
+.progress-dots {
+  $size: 10px;
+
+  display: inline-block;
+  float: right;
+  line-height: $size;
+  box-shadow: $progress-box-shadow;
+
+  .dot {
+    width: $size;
+    height: $size;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid $color-secondary;
+    vertical-align: sub;
+
+    &.active {
+      box-shadow: none;
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+    }
+  }
+}

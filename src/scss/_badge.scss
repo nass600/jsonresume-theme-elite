@@ -6,7 +6,13 @@
 }
 
 .badge-outline-secondary {
-  @include badge-outline-variant($color-secondary);
+  .sidebar & {
+    @include badge-outline-variant($sidebar-secondary);
+  }
+
+  .page & {
+    @include badge-outline-variant($page-secondary);
+  }
 }
 
 .badge-secondary {

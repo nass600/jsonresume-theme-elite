@@ -167,7 +167,7 @@
     "skills": [
         {
             "name": "Web Development",
-            "level": "Master",
+            "level": "5",
             "keywords": [
                 "HTML",
                 "CSS",
@@ -176,7 +176,7 @@
         },
         {
             "name": "Compression",
-            "level": "Master",
+            "level": "5",
             "keywords": [
                 "Mpeg",
                 "MP4",
@@ -186,15 +186,19 @@
     ],
     "languages": [
         {
-            "name": "English",
+            "name": "gb",
             "level": "Native speaker"
         },
         {
-            "name": "German",
+            "name": "de",
             "level": "Basic"
         },
         {
-            "name": "Spanish",
+            "name": "es",
+            "level": "Intermediate"
+        },
+        {
+            "name": "pl",
             "level": "Intermediate"
         }
     ],

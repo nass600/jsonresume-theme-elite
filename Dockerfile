@@ -12,5 +12,5 @@ COPY . /usr/src/app
 
 ENV NODE_ENV development
 
-EXPOSE 4000
+EXPOSE 4000 4001 3001
 CMD npm run start
