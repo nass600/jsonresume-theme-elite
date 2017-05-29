@@ -1,82 +1,51 @@
-<section class="section-contact">
-    {{>title icon='el-phone' title='Contact'}}
-    <ul>
-        {{#if resume.basics.location}}
-            <li class="icon-item clearfix">
-                <i class="el-map-marker text-primary"></i>
-                <span class="text-secondary">
-                {{resume.basics.location.address}}
-                    {{resume.basics.location.postalCode}}
-                    {{resume.basics.location.city}}
-                    {{resume.basics.location.region}}
-                    {{resume.basics.location.countryCode}}
-            </span>
-            </li>
-        {{/if}}
-        {{#if resume.basics.email}}
-            <li class="icon-item clearfix">
-                <i class="el-envelope text-primary"></i>
-                <span class="text-secondary">{{resume.basics.email}}</span>
-            </li>
-        {{/if}}
-        {{#if resume.basics.phone}}
-            <li class="icon-item clearfix">
-                <i class="el-phone text-primary"></i>
-                <span class="text-secondary">{{resume.basics.phone}}</span>
-            </li>
-        {{/if}}
-        {{#if resume.basics.website}}
-            <li class="icon-item clearfix">
-                <i class="el-link text-primary"></i>
-                <a class="text-secondary" href="{{resume.basics.website}}">
-                    {{removeSchema resume.basics.website}}
-                </a>
-            </li>
-        {{/if}}
-    </ul>
-    {{#if resume.basics.profiles.length}}
+{{#if resume.basics}}
+    <section class="section-contact">
+        {{>title icon='el-phone' title='Contact'}}
         <ul>
-            {{#each resume.basics.profiles}}
+            {{#if resume.basics.location}}
                 <li class="icon-item clearfix">
-                    <i class="el-{{sanitizeLowercase network}} text-primary"></i>
-                    <a class="text-secondary" href="{{url}}">
-                        {{removeSchema url}}
+                    <i class="el-map-marker text-primary"></i>
+                    <span class="text-secondary">
+                    {{resume.basics.location.address}}
+                        {{resume.basics.location.postalCode}}
+                        {{resume.basics.location.city}}
+                        {{resume.basics.location.region}}
+                        {{resume.basics.location.countryCode}}
+                </span>
+                </li>
+            {{/if}}
+            {{#if resume.basics.email}}
+                <li class="icon-item clearfix">
+                    <i class="el-envelope text-primary"></i>
+                    <span class="text-secondary">{{resume.basics.email}}</span>
+                </li>
+            {{/if}}
+            {{#if resume.basics.phone}}
+                <li class="icon-item clearfix">
+                    <i class="el-phone text-primary"></i>
+                    <span class="text-secondary">{{resume.basics.phone}}</span>
+                </li>
+            {{/if}}
+            {{#if resume.basics.website}}
+                <li class="icon-item clearfix">
+                    <i class="el-link text-primary"></i>
+                    <a class="text-secondary" href="{{resume.basics.website}}">
+                        {{removeSchema resume.basics.website}}
                     </a>
                 </li>
-            {{/each}}
+            {{/if}}
         </ul>
-    {{/if}}
-</section>
-
-{{#if resume.skills.length}}
-    <hr>
-    <section class="section-skills">
-        {{>title icon='el-tasks' title='Skills'}}
-        <table>
-            <tbody>
-            {{#each resume.skills}}
-                <tr class="skill">
-                    {{#if name}}
-                        <td class="name text-secondary">
-                            {{name}}
-                        </td>
-                    {{/if}}
-                    {{#if level}}
-                        <td class="cell-progress">
-                            <ul class="progress-dots">
-                                {{#times 5}}
-                                    {{#lte this ../level}}
-                                        <li class="dot active"></li>
-                                    {{else}}
-                                        <li class="dot"></li>
-                                    {{/lte}}
-                                {{/times}}
-                            </ul>
-                        </td>
-                    {{/if}}
-                </tr>
-            {{/each}}
-            </tbody>
-        </table>
+        {{#if resume.basics.profiles.length}}
+            <ul>
+                {{#each resume.basics.profiles}}
+                    <li class="icon-item clearfix">
+                        <i class="el-{{sanitizeLowercase network}} text-primary"></i>
+                        <a class="text-secondary" href="{{url}}">
+                            {{removeSchema url}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
     </section>
 {{/if}}

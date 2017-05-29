@@ -65,11 +65,24 @@
   }
 
   .name {
-    margin: 2rem auto 1rem;
+    margin: 1rem auto;
   }
 
   .subtitle {
     margin-bottom: 1rem;
+  }
+}
+
+@if $enable-avatar == true {
+  .section-basic .avatar {
+    display: block;
+  }
+}
+
+@else {
+  .section-basic .avatar {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -103,4 +116,17 @@
   li + li {
     margin-top: 0.2rem;
   }
+}
+
+.section-education .card-block {
+  padding-bottom: 0;
+}
+
+.section-interests .card-block {
+  padding-top: 0;
+}
+
+.section-references .card-block {
+  padding-top: 0;
+  padding-bottom: 0;
 }

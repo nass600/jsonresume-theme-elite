@@ -1,8 +1,12 @@
 # jsonresume-theme-elite
 
 [![Build Status](https://api.travis-ci.org/nass600/jsonresume-theme-elite.svg?branch=master)](https://travis-ci.org/nass600/jsonresume-theme-elite)
+[![npm](https://img.shields.io/npm/v/jsonresume-theme-elite.svg)](https://www.npmjs.com/package/jsonresume-theme-elite)
+[![npm](https://img.shields.io/npm/dt/jsonresume-theme-elite.svg)](https://www.npmjs.com/package/jsonresume-theme-elite)
 
 Elite resume for [jsonresume](https://jsonresume.org/)
+
+![](docs/img/elite.jpg)
 
 ## Installation
 
@@ -93,20 +97,25 @@ This project respects fully the schema but it has some special cases or improvem
 
    In normal mode
 
-### Design Toggles
+## Design Toggles
 
 This resume design provides, for some kind of content, diferent locations and styles.
 All this toggles are activated by `scss` variables in the file `src/scss/_variables.scss`
 and they are called `$enable-something`
 
 
-#### Skills
+1. `$enable-avatar`
 
-Skills could be located either on the sidebar in a more compact form or in the page
-as another regular section.
+   Will toggle displaying the user avatar (`basics.picture`)
 
-By default is located in the sidebar but, if you change the variable `$enable-skills-sidebar`
-to false it will show up in the normal content right section.
+2. `$enable-skills-sidebar`
+
+   Skills could be located either on the sidebar in a more compact form or in the page
+   as another regular section.
+
+   By default is located in the sidebar but, if you change the variable
+   to false it will show up in the normal content right section.
+
 
 ## Generating your resume in pdf
 
@@ -149,9 +158,6 @@ Then you can access the browser preview of your resume at `localhost:4000`.
 If you are going to perform several exchanges you can access the hot reload
 version at `localhos:4001` so every time you change something the page
 would be reloaded to render the latest changes.
-
-### Changing colors
-
 
 
 ## Credits

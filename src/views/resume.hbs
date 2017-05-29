@@ -13,6 +13,7 @@
         <div class="sidebar">
             {{> basic }}
             {{> contact }}
+            {{> skills-progress }}
         </div>
         <div class="content">
             {{> summary }}
@@ -38,7 +39,7 @@
         var height = html.scrollHeight
 
         if (height/pageHeight !== 0) {
-            html.style.height = (Math.ceil(height/pageHeight) * pageHeight) + 'px'
+          html.style.height = (Math.ceil(height/pageHeight) * pageHeight) + 'px'
         }
     </script>
 </body>

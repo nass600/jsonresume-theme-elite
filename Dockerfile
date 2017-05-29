@@ -10,6 +10,9 @@ COPY package.json /usr/src/app
 RUN npm install --silent
 COPY . /usr/src/app
 
+COPY src/fonts/MavenPro-Regular.ttf /usr/share/fonts/truetype/mavenpro
+RUN fc-cache -fv
+
 ENV NODE_ENV development
 
 EXPOSE 4000 4001 3001

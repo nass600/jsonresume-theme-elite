@@ -1,0 +1,279 @@
+{
+  "basics": {
+    "name": "Ignacio Velazquez",
+    "picture": "https://s.gravatar.com/avatar/9944de1cf46e416b2d235241cae1d9ee?s=90",
+    "email": "ivelazquez85@gmail.com",
+    "label": "Software Engineer",
+    "phone": "+353 (083) 880 9904",
+    "website": "http://ignaciovelazquez.es",
+    "summary": "<p>Over 10 years of development experience in a variety of technologies mainly focused on web and mobile technology stack.</p><p>I've worked for four tech startup companies targeted to different industries in various growth stages phase, designing and implementing the software architecture according to their business needs, building and training tech teams from scratch and applying agile methodologies and lean processes as a rule of thumb.</p>",
+    "location": {
+      "city": "Dublin,",
+      "countryCode": "Ireland"
+    },
+    "profiles": [
+      {
+        "network": "Skype",
+        "username": "nass600",
+        "url": "@nass600"
+      },
+      {
+        "network": "Linkedin",
+        "username": "nass600",
+        "url": "https://linkedin.com/in/nass600"
+      },
+      {
+        "network": "Twitter",
+        "username": "nass600",
+        "url": "https://twitter.com/nass600"
+      },
+      {
+        "network": "Github",
+        "username": "nass600",
+        "url": "https://github.com/nass600"
+      },
+      {
+        "network": "Skype",
+        "username": "nass600",
+        "url": "@nass600"
+      },
+      {
+        "network": "Stackoverflow",
+        "username": "nass600",
+        "url": "https://stackoverflow.com/users/1828040/nass600"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Hostelworld",
+      "position": "Software Engineer",
+      "website": "http://hostelworld.com",
+      "startDate": "2016-11-21",
+      "summary": "<ul><li>Refactored testing platform from the ground using PHPUnit and Behat.</li><li>Design and implementation of projects automatization and building.</li></ul>",
+      "highlights": [
+        "PHP",
+        "Zend",
+        "PHPUnit",
+        "Behat",
+        "Foundation",
+        "jQuery"
+      ]
+    },
+    {
+      "company": "Alfa9",
+      "position": "Symfony2 Trainer",
+      "website": "http://alfa9.com",
+      "startDate": "2014-05-01",
+      "summary": "<ul><li>Training companies in Symfony2 Standard Edition Framework to provide them an immediate working knowledge.</li></ul>",
+      "highlights": [
+        "PHP",
+        "Symfony",
+        "Doctrine",
+        "Twig"
+      ]
+    },
+    {
+      "company": "Shazura",
+      "position": "Tech Lead",
+      "website": "http://shazura.com",
+      "startDate": "2015-08-01",
+      "endDate": "2016-09-01",
+      "summary": "<ul><li>Leading the technology department's architecture design and team training reporting directly to the CTO and supporting him in management tasks and planning.</li><li>Creating a high availability and scalable platform on the foundations of multiple Django REST APIs with persistence on a PostgreSQL Big Data architecture in charge of storing millions of images.</li><li>Development of cutting-edge dynamic client apps on AngularJS.</li></ul>",
+      "highlights": [
+        "Django",
+        "python",
+        "REST API",
+        "Oauth2",
+        "Angular",
+        "Bootstrap",
+        "SASS",
+        "HTML5",
+        "Redis",
+        "RabbitMQ",
+        "ElasticSearch",
+        "PostgreSQL",
+        "AWS",
+        "Vagrant"
+      ]
+    },
+    {
+      "company": "Fleet",
+      "position": "CTO & Co-founder",
+      "website": "http://getfleet.co",
+      "startDate": "2015-06-01",
+      "endDate": "2016-08-01",
+      "summary": "<ul><li>Building the product and team from the scratch following the lean processes.</li><li>Leading the tech team and responsible of the platform/products and software architecture, product development and digital analysis.</li></ul>",
+      "highlights": [
+        "Django",
+        "python",
+        "REST API",
+        "Angular",
+        "ES2015",
+        "Babel",
+        "Bootstrap",
+        "LESS",
+        "HTML5",
+        "Redis",
+        "RabbitMQ",
+        "PostgreSQL",
+        "AWS",
+        "Docker"
+      ]
+    },
+    {
+      "company": "NativeAD",
+      "position": "Tech Lead",
+      "website": "http://native.ad",
+      "startDate": "2014-09-01",
+      "endDate": "2015-08-01",
+      "summary": "<ul><li>Leading a small team of backend developers following Agile methodologies and designing the architecture for the advertising platform.</li><li>Developing a REST API under Symfony2 consumed by an AngularJS application. Use of MongoDB as database, RabbitMQ as queue system, Behat for BDD, PHPUnit for TDD...</li></ul>",
+      "highlights": [
+        "PHP",
+        "Symfony",
+        "Doctrine",
+        "REST API",
+        "Oauth2",
+        "MongoDB",
+        "Redis",
+        "Angular",
+        "Node",
+        "LESS",
+        "AWS"
+      ]
+    },
+    {
+      "company": "Idealmonkey",
+      "position": "Lead Frontend Developer",
+      "website": "http://idealmonkey.com",
+      "startDate": "2013-08-01",
+      "endDate": "2014-09-01",
+      "summary": "<ul><li>Started in the company at the earliest stage defining and developing the MVP in a small multiskilling scrum team.</li><li>Leading and organizing web and mobile projects in a team driven by Agile Methodology acting as a proxy for the business product requirements.</li><li>Developing a Silex front project with a strong workload of Backbone.js connected via an API REST to a Symfony2 core project.</li></ul>",
+      "highlights": [
+        "PHP",
+        "Silex",
+        "Backbone",
+        "Handlebars",
+        "RequireJS",
+        "LESS",
+        "REST API",
+        "Oauth2",
+        "Microservices"
+      ]
+    },
+    {
+      "company": "Bodaclick",
+      "position": "Senior PHP/Symfony Developer",
+      "website": "http://www.bodaclick.com/",
+      "startDate": "2012-08-01",
+      "endDate": "2013-08-01",
+      "summary": "<ul><li>Working in a medium size tech department with several project- focused teams.</li><li>Developing the internal tech structure of the company based on several projects consuming resources from a main project via RESTful API coded with Symfony 2.</li><li>Supervising frontend part of satellite projects as Javascript Lead Developer and training the team in Symfony2 Framework.</li></ul>",
+      "highlights": [
+        "PHP",
+        "Symfony",
+        "REST API",
+        "Oauth2",
+        "MySQL",
+        "MongoDB",
+        "jQuery",
+        "LESS"
+      ]
+    },
+    {
+      "company": "Ideup",
+      "position": "PHP/Symfony Developer",
+      "website": "http://www.ideup.com/",
+      "startDate": "2011-06-01",
+      "endDate": "2012-08-01",
+      "summary": "<ul><li>Working in the Tech department in a small scrum team using and learning agile methodologies.</li><li>Web architecture design and development of highly interactive apps collaborating with the rest of departments for product development (UX, design, front...).</li><li>Development of open-source bundles for the Symfony community and speaker at deSymfony 2012.</li></ul>",
+      "highlights": [
+        "PHP",
+        "Symfony",
+        "MySQL",
+        "jQuery"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Illinois Institute of Technology, Chicago, USA",
+      "area": "",
+      "studyType": "Thesis",
+      "startDate": "2011-02-01",
+      "endDate": "2011-06-01",
+      "courses": [
+        "Research program in Web 2.0 and Rich Internet Applications (RIA).",
+        "Media Center Web App, video streaming and rich dynamic interface."
+      ]
+    },
+    {
+      "institution": "Fachhochschule Hannover, Hannover, Germany",
+      "area": "",
+      "studyType": "Erasmus Program",
+      "startDate": "2009-10-01",
+      "endDate": "2010-08-01",
+      "courses": [
+        "Completed two full semesters of IT Security and Graphics master as transfer student.",
+        "IT Security protocols and systems design including Mobile Business Apps.",
+        "Graphic apps, 3D Videogames and Web Services."
+      ]
+    },
+    {
+      "institution": "Univ. Politécnica, Madrid, Spain",
+      "area": "",
+      "studyType": "Computer Science Engineer",
+      "startDate": "2003-09-01",
+      "endDate": "2009-08-01",
+      "courses": [
+        "Five year bachelor Degree in Computer Science.",
+        "Software Project Management, Operating Systems and Networking design and development, Computers architecture",
+        "Object-Oriented and concurrent programming, Data structures, Databases design and management",
+        "Artificial intelligence, Mathematics, Algorithms, Physics"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "API REST",
+      "level": "5"
+    },
+    {
+      "name": "Databases",
+      "level": "4"
+    },
+    {
+      "name": "Javascript",
+      "level": "4"
+    },
+    {
+      "name": "SASS / LESS",
+      "level": "5"
+    },
+    {
+      "name": "Design / UX",
+      "level": "3"
+    },
+    {
+      "name": "Agile / Lean",
+      "level": "4"
+    },
+    {
+      "name": "Security",
+      "level": "4"
+    }
+  ],
+  "languages": [
+    {
+      "name": "gb",
+      "level": "Fluent"
+    },
+    {
+      "name": "de",
+      "level": "Basic"
+    },
+    {
+      "name": "es",
+      "level": "Mother tongue"
+    }
+  ]
+}

@@ -52,7 +52,7 @@ body {
 
     span {
       margin: 0;
-      color: $sidebar-color;
+      color: $sidebar-color !important;
     }
   }
 
@@ -103,12 +103,14 @@ body {
 
   .content .section-skills {
     display: none;
+    visibility: hidden;
   }
 }
 
 @else {
   .sidebar .section-skills {
     display: none;
+    visibility: hidden;
   }
 
   .content .section-skills {

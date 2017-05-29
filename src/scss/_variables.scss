@@ -3,6 +3,7 @@
 
 // Toggles
 
+$enable-avatar: true;
 $enable-skills-sidebar: true;
 
 // Colors
@@ -23,8 +24,6 @@ $sidebar-primary: $color-primary;
 $sidebar-secondary: $color-secondary;
 
 // Fonts
-
-@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
 
 $elite-font-path: "../fonts";
 $elite-font-name: "elite";

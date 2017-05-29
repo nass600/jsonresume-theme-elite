@@ -9,17 +9,6 @@
     width: 100%;
     margin: 0;
     box-shadow: none;
-  }
-
-  .section-summary,
-  .section-languages,
-  .card,
-  .sidebar .section-skills,
-  p {
-    page-break-inside: avoid;
-  }
-
-  .page {
     display: -webkit-box;
     display: -webkit-flex;
     -webkit-flex-wrap: wrap;
@@ -33,5 +22,13 @@
   .content {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
+  }
+
+  .section-summary,
+  .section-languages,
+  .card,
+  .sidebar .section-skills,
+  p {
+    page-break-inside: avoid;
   }
 }
