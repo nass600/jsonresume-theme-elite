@@ -97,6 +97,10 @@ This project respects fully the schema but it has some special cases or improvem
 
    In normal mode
 
+6. `certifications`
+
+   Same data structure as awards
+
 ## Design Toggles
 
 This resume design provides, for some kind of content, diferent locations and styles.
@@ -164,3 +168,4 @@ would be reloaded to render the latest changes.
 
 + Ignacio Velazquez <ivelazquez85@gmail.com>
 + Dev setup based on the amazing [Caffeine theme](https://github.com/kelyvin/jsonresume-theme-caffeine)
++ Some of the icons and all the country flags where made by [Freepik](http://www.freepik.com)
