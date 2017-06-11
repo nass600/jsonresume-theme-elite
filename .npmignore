@@ -13,3 +13,4 @@ gulp-cache
 Dockerfile
 docker-compose.yml
 docs
+package-lock.json

@@ -8,3 +8,4 @@ node_modules/
 .eslintcache
 dist
 gulp-cache
+package-lock.json

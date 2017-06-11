@@ -4,124 +4,83 @@
 [![npm](https://img.shields.io/npm/v/jsonresume-theme-elite.svg)](https://www.npmjs.com/package/jsonresume-theme-elite)
 [![npm](https://img.shields.io/npm/dt/jsonresume-theme-elite.svg)](https://www.npmjs.com/package/jsonresume-theme-elite)
 
-Elite resume for [jsonresume](https://jsonresume.org/)
+Elite theme for [JSONResume](https://jsonresume.org/)
 
 ![](docs/img/elite.jpg)
 
+## TOC
+
+1. [Installation](#installtion)
+2. [Development](#development)
+3. [Generating your resume in PDF](#generating-your-resume-in-pdf)
+4. [Resume data](docs/RESUME_DATA.md)
+5. [Design customizations](docs/DESIGN_CUSTOMIZATIONS.md)
+
 ## Installation
+
+### Using Docker (recommended)
+
+This project comes with a Dockerfile to provide you the needed software dependencies. Installation
+is via docker compose by running:
+
+```bash
+docker-compose build
+```
+
+### Local environment
+
+If you want to generate your resume directly from this repository, the installation is
+the same as any other javascript project with NPM dependencies.
 
 ```bash
 npm install
 ```
 
-## Resume data
+### As an NPM dependency
 
-This project comes with a dummy data set contained in the file `resume-sample.json`.
-For create your own resume file you can either copy from that file or start a
-new one following the jsonresume [schema](https://jsonresume.org/schema/).
+If you want to add this theme as a dependency run the following command in your project:
 
-All you have to do is having a file named `resume.json` in the project's root
-with the data you want to print in your resume.
-
-### Special tweaks
-
-This project respects fully the schema but it has some special cases or improvements over it:
-
-1. `basics.summary`
-
-   You can add html inside such as br, p, strong...
-
-2. `basics.profiles`
-
-   The social network icon preceding the `url` is generated based on `network`.
-   `username` is being ignored.
-   Allowed values for `network` are:
-
-   + Twitter
-   + Youtube
-   + Vimeo
-   + Facebook
-   + Google Plus
-   + Instagram
-   + Tumblr
-   + Pinterest
-   + Dribbble
-   + Xing
-   + Github
-   + Bitbucket
-   + Stackoverflow
-   + Skype
-
-3. `languages`
-
-   For showing the correct country flag on the table you must use
-   [ISO_3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) country codes.
-   Below you can find the currently supported codes:
-
-   | code | country        |
-   |:----:|:---------------|
-   | cn   | China          |
-   | cz   | Czech Republic |
-   | de   | Germany        |
-   | dk   | Denmark        |
-   | es   | Spain          |
-   | fi   | Finland        |
-   | fr   | France         |
-   | gb   | United Kingdom |
-   | gr   | Greece         |
-   | hr   | Croatia        |
-   | in   | India          |
-   | it   | Italy          |
-   | jp   | Japan          |
-   | kr   | South Korea    |
-   | nl   | Netherlands    |
-   | no   | Norway         |
-   | pl   | Poland         |
-   | pt   | Portugal       |
-   | ro   | Romania        |
-   | ru   | Russia         |
-   | se   | Sweden         |
-   | tr   | Turkey         |
-
-   If your language country is not in the list open an issue and I will
-   be please to add it for you.
-
-4. `work.summary`, `volunteer.summary`, `awards.summary`, `publications.summary`
-
-   If adding **<ul>** and **<li>** to the content the colored bullets will show up.
-
-5. `skills`
-
-   When in "sidebar mode", the data used is only `name` and `level`. The latest
-   has to be a number between **0** and **5**.
-
-   In normal mode
-
-6. `certifications`
-
-   Same data structure as awards
-
-## Design Toggles
-
-This resume design provides, for some kind of content, diferent locations and styles.
-All this toggles are activated by `scss` variables in the file `src/scss/_variables.scss`
-and they are called `$enable-something`
+```bash
+npm install --save jsonresume-theme-elite
+```
 
 
-1. `$enable-avatar`
-
-   Will toggle displaying the user avatar (`basics.picture`)
-
-2. `$enable-skills-sidebar`
-
-   Skills could be located either on the sidebar in a more compact form or in the page
-   as another regular section.
-
-   By default is located in the sidebar but, if you change the variable
-   to false it will show up in the normal content right section.
 
 
-## Generating your resume in pdf
+
+## Development
+
+If you need to do some modifications in the design you can serve the
+resume in the browser in one of the following ways.
+
+### Using Docker (recommended)
+
+```bash
+docker-compose up
+```
+
+Then you can access the browser preview of your resume at `0.0.0.0:4000`.
+
+### Local environment
+
+```bash
+npm start
+```
+
+Then you can access the browser preview of your resume at `localhost:4000`.
+
+
+
+If you are going to perform several exchanges you can access the hot reload
+version using port `4001` so every time you change something the page
+would be reloaded to render the latest changes.
+
+
+
+
+
+
+## Generating your resume in PDF
 
 By default the latest version of resume-cli only supports rendering the
 resume in `Letter` format.
@@ -136,6 +95,24 @@ supported by [PhantomJS](http://phantomjs.org/api/webpage/property/paper-size.ht
 + Letter
 + Tabloid
 
+Again, you have some ways of exporting the resume depending on your environment:
+
+### Using Docker (recommended)
+
+By running the following command you will export it in `A4` format:
+
+``` bash
+docker-compose run web npm run export
+```
+
+But if you want to use other supported formats you can run:
+
+```bash
+docker-compose run web node_modules/.bin/gulp export --page-format A3
+```
+
+### Local environment
+
 By running the following command you will export it in `A4` format:
 
 ```bash
@@ -147,21 +124,6 @@ But if you want to use other supported formats you can run:
 ```bash
 node_modules/.bin/gulp export --page-format A3
 ```
-
-## Development
-
-If you need to do some modifications in the design you can serve the
-resume in the browser by running:
-
-```bash
-npm start
-```
-
-Then you can access the browser preview of your resume at `localhost:4000`.
-
-If you are going to perform several exchanges you can access the hot reload
-version at `localhos:4001` so every time you change something the page
-would be reloaded to render the latest changes.
 
 
 ## Credits
