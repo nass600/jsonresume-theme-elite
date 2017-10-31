@@ -1,5 +1,4 @@
 .idea
-node_modules
 gulp
 src
 .travis.yml
