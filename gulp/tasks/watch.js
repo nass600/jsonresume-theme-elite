@@ -10,21 +10,19 @@ gulp.task('watch', function () {
     browserSync: 4001
   }
 
-  setTimeout(function () {
-    browserSync.init({
-      proxy: 'localhost:' + ports.resumeCli,
-      reloadDelay: 300,
-      port: ports.browserSync
-    })
+  browserSync.init({
+    proxy: 'localhost:' + ports.resumeCli,
+    reloadDelay: 300,
+    port: ports.browserSync
+  })
 
-    // watch for changes
-    gulp.watch([
-      config.paths.dist.all,
-      config.names.resume.data
-    ]).on('change', browserSync.reload)
+  // watch for changes
+  gulp.watch([
+    config.paths.dist.all,
+    config.names.resume.data
+  ]).on('change', browserSync.reload)
 
-    gulp.watch(config.paths.views.all, ['html'])
-    gulp.watch(config.paths.images.all, ['images'])
-    gulp.watch(config.paths.styles.all, ['styles'])
-  }, 2500)
+  gulp.watch(config.paths.views.all, ['html'])
+  gulp.watch(config.paths.images.all, ['images'])
+  gulp.watch(config.paths.styles.all, ['styles'])
 })

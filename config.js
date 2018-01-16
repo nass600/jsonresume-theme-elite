@@ -25,8 +25,8 @@ module.exports = {
     styles: {
       cache: '.sass-cache',
       all: 'src/scss/**/*.scss',
-      dest: 'dist/styles',
-      entry: 'dist/styles/main.css'
+      dest: 'dist/css',
+      entry: 'dist/css/elite.css'
     },
     js: {
       all: '**/*.js'
