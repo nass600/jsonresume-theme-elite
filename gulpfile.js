@@ -1,10 +1,16 @@
-'use strict'
-
-const gulp = require('gulp')
-const requireDir = require('require-dir')
+import gulp from 'gulp'
+import requireDir from 'require-dir'
+import del from 'del'
+import config from './config'
 
 requireDir('./gulp/', {recurse: true})
 
-gulp.task('default', ['clean'], function () {
-  gulp.start('build')
-})
+/**
+ * Clean previously generated files
+ */
+gulp.task('clean', del.bind(null, [config.paths.styles.cache, config.paths.dist.dir]))
+
+/**
+ * Default task: Build
+ */
+gulp.task('default', ['clean'], () => gulp.start('build'))

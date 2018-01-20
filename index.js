@@ -1,5 +1,3 @@
-'use strict'
-
 const fs = require('fs')
 const path = require('path')
 const handlebars = require('handlebars')
@@ -65,7 +63,6 @@ function render (resume, pageFormat) {
   let Handlebars = handlebarsWax(handlebars)
 
   Handlebars.partials(path.join(__dirname, config.paths.views.partials))
-  Handlebars.partials(path.join(__dirname, config.paths.views.components))
 
   return Handlebars.compile(resumeTemplate)({
     css: css,

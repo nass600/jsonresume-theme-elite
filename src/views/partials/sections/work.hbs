@@ -1,8 +1,8 @@
-{{#if resume.volunteer.length}}
-    <section class="section-volunteer">
-        {{>title icon='el-hand-up' title='Volunteer'}}
+{{#if resume.work.length}}
+    <section class="section-work">
+        {{> components/title icon='el-suitcase' title='Experience'}}
 
-        {{#each resume.volunteer}}
+        {{#each resume.work}}
             <div class="card">
                 {{#if startDate}}
                     <div class="card-header">
@@ -10,7 +10,7 @@
                             {{formatDate startDate}} - {{formatDate endDate}} ({{dateDiff startDate endDate}})
                         </span>
                         {{#unless endDate}}
-                            <span class="badge badge-outline-success">current</span>
+                            <span class="ml-2 text-success">current</span>
                         {{/unless}}
                     </div>
                 {{/if}}
@@ -19,8 +19,8 @@
                     <div class="card-block">
                         <h4 class="card-title">
                             {{position}}
-                            {{#if organization}}
-                                <span class="card-subtitle">{{organization}}</span>
+                            {{#if company}}
+                                <span class="card-subtitle">{{company}}</span>
                             {{/if}}
                         </h4>
                         {{#if summary}}
@@ -29,20 +29,21 @@
                     </div>
                 {{/if}}
                 {{#or highlights.length website}}
-                    <div class="card-footer text-muted">
-                        {{#if website.length}}
+                    <div class="card-footer">
+                        {{#if website}}
                             <a class="card-link text-secondary" href="{{website}}">
                                 <i class="el-link text-primary"></i><span>{{website}}</span>
                             </a>
                         {{/if}}
-                        {{#if highlights.length}}
-                            <ul class="card-highlights">
-                                {{#each highlights}}
-                                    <li class="badge badge-outline-secondary">
-                                        {{this}}
-                                    </li>
-                                {{/each}}
-                            </ul>
+                        {{#if highlights}}
+                        <div class="card-tags" href="{{website}}">
+                            <i class="el-tags text-primary"></i>
+                            <div class="tag-list">
+                            {{#each highlights}}
+                                <span class="tag text-secondary">{{this}}</span>
+                            {{/each}}
+                            </div>
+                        </div>
                         {{/if}}
                     </div>
                 {{/or}}

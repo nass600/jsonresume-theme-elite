@@ -11,8 +11,7 @@ module.exports = {
       all: 'src/views/**/*.hbs',
       dest: 'dist/views',
       entry: 'dist/views/resume.hbs',
-      partials: 'dist/views/partials/**/*.hbs',
-      components: 'dist/views/components/**/*.hbs'
+      partials: 'dist/views/partials/**/*.hbs'
     },
     images: {
       all: 'src/images/**/*',
