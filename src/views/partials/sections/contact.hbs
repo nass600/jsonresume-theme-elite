@@ -14,6 +14,14 @@
                     <span class="text-secondary">{{resume.basics.phone}}</span>
                 </li>
             {{/if}}
+            {{#if resume.basics.website}}
+                <li class="icon-item clearfix">
+                    <svg class="text-primary"><use xlink:href="#link"></use></svg>
+                    <a class="text-secondary" href="{{resume.basics.website}}">
+                        {{removeSchema resume.basics.website}}
+                    </a>
+                </li>
+            {{/if}}
             {{#if resume.basics.location}}
                 <li class="icon-item clearfix">
                     <svg class="text-primary"><use xlink:href="#map-marker"></use></svg>
@@ -24,14 +32,6 @@
                         {{resume.basics.location.region}}
                         {{resume.basics.location.countryCode}}
                 </span>
-                </li>
-            {{/if}}
-            {{#if resume.basics.website}}
-                <li class="icon-item clearfix">
-                    <svg class="text-primary"><use xlink:href="#link"></use></svg>
-                    <a class="text-secondary" href="{{resume.basics.website}}">
-                        {{removeSchema resume.basics.website}}
-                    </a>
                 </li>
             {{/if}}
         </ul>

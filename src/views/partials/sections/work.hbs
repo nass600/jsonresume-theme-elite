@@ -31,13 +31,18 @@
                 {{#or highlights.length website}}
                     <div class="card-footer">
                         {{#if website}}
-                            <a class="card-link text-secondary" href="{{website}}">
-                                <i class="el-link text-primary"></i><span>{{website}}</span>
+                            <a class="card-link icon-item text-secondary" href="{{website}}">
+                                <svg class="text-primary">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                <span>{{website}}</span>
                             </a>
                         {{/if}}
                         {{#if highlights}}
-                        <div class="card-tags" href="{{website}}">
-                            <i class="el-tags text-primary"></i>
+                        <div class="card-tags icon-item" href="{{website}}">
+                            <svg class="text-primary">
+                                <use xlink:href="#tags"></use>
+                            </svg>
                             <div class="tag-list">
                             {{#each highlights}}
                                 <span class="tag text-secondary">{{this}}</span>

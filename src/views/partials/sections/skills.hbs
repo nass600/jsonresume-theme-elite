@@ -15,8 +15,10 @@
                 {{/if}}
                 {{#if keywords.length}}
                     <div class="card-footer">
-                        <div class="card-tags" href="{{website}}">
-                            <i class="el-tags text-primary"></i>
+                        <div class="card-tags icon-item" href="{{website}}">
+                            <svg class="text-primary">
+                                <use xlink:href="#tags"></use>
+                            </svg>
                             <div class="tag-list">
                                 {{#each keywords}}
                                     <span class="tag text-secondary">{{this}}</span>

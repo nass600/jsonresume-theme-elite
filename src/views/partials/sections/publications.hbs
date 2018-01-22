@@ -27,8 +27,11 @@
                 {{/if}}
                 {{#if website}}
                     <div class="card-footer">
-                        <a class="card-link text-secondary" href="{{website}}">
-                            <i class="el-link text-primary"></i><span>{{website}}</span>
+                        <a class="card-link icon-item text-secondary" href="{{website}}">
+                            <svg class="text-primary">
+                                <use xlink:href="#link"></use>
+                            </svg>
+                            <span>{{website}}</span>
                         </a>
                     </div>
                 {{/if}}
