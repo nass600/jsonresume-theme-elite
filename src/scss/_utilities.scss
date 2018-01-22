@@ -2,12 +2,18 @@
 // ----------------------------------------------
 
 .text-primary {
+  fill: $color-primary;
+
   .sidebar & {
     color: $sidebar-primary !important;
   }
 
   .content & {
     color: $page-primary !important;
+  }
+
+  svg {
+    fill: $color-primary;
   }
 }
 
@@ -27,15 +33,18 @@
 }
 
 .icon-item {
-  i,
-  span,
-  a {
-    display: inline-block;
-    vertical-align: middle;
+  $icon-width: 16px;
+  display: flex;
+
+  svg {
+    width: $icon-width;
+    height: $icon-width;
   }
 
   span,
   a {
-    margin-left: 0.3rem;
+    flex: 1;
+    line-height: $icon-width;
+    margin-left: $spacer;
   }
 }

@@ -87,7 +87,7 @@
 }
 
 .section-contact {
-  $icon-width: 20px;
+  $icon-width: 16px;
 
   ul + ul {
     margin-top: 2rem;
@@ -95,26 +95,15 @@
 
   li {
     font-size: 0.7rem;
-    position: relative;
-
-    i {
-      font-size: 0.8rem;
-      float: left;
-      width: $icon-width;
-    }
 
     span,
     a {
       word-wrap: break-word;
-      line-height: 19px;
-      margin-left: 0;
-      float: left;
-      width: $sidebar-width - ($spacer * 2) - $icon-width;
     }
   }
 
   li + li {
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
   }
 }
 

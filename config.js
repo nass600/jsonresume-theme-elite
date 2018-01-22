@@ -34,7 +34,8 @@ module.exports = {
   names: {
     resume: {
       data: 'resume.json',
-      dest: 'resume'
+      dest: 'resume',
+      pdf: './resume.pdf'
     }
   }
 }

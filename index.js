@@ -59,14 +59,16 @@ handlebars.registerHelper({
 
 function render (resume, pageFormat) {
   let css = fs.readFileSync(path.join(__dirname, config.paths.styles.entry), 'utf-8')
+  let icons = fs.readFileSync(path.join(__dirname, 'dist/images/sprite/icons.svg'), 'utf-8')
   let resumeTemplate = fs.readFileSync(path.join(__dirname, config.paths.views.entry), 'utf-8')
   let Handlebars = handlebarsWax(handlebars)
 
   Handlebars.partials(path.join(__dirname, config.paths.views.partials))
 
   return Handlebars.compile(resumeTemplate)({
-    css: css,
-    resume: resume,
+    icons,
+    css,
+    resume,
     format: pageFormat || 'Letter'
   })
 }
@@ -76,7 +78,7 @@ function exportPdf (resumeFile, pageFormat) {
   const pdf = require('html-pdf')
   const template = render(resume, pageFormat)
 
-  pdf.create(template, {format: pageFormat}).toFile('./resume.pdf', function (err, res) {
+  pdf.create(template, {format: pageFormat}).toFile(config.names.resume.pdf, function (err, res) {
     if (err) return console.log(err)
   })
 }

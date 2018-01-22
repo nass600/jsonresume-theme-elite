@@ -1,14 +1,39 @@
 import gulp from 'gulp'
 import size from 'gulp-size'
 import fs from 'fs'
+import path from 'path'
 import cssImport from 'gulp-cssimport'
 import gulpLoadPlugins from 'gulp-load-plugins'
 import eslint from 'gulp-eslint'
 import gulpStylelint from 'gulp-stylelint'
 import lazypipe from 'lazypipe'
 import config from '../../config'
+import svgstore from 'gulp-svgstore'
+import svgmin from 'gulp-svgmin'
 
 const $ = gulpLoadPlugins()
+
+/**
+ * Generate SVG sprite for icons
+ */
+gulp.task('icons', () => {
+  return gulp
+    .src('src/images/icons/*.svg')
+    .pipe(svgmin(file => {
+      const prefix = path.basename(file.relative, path.extname(file.relative))
+
+      return {
+        plugins: [{
+          cleanupIDs: {
+            prefix: prefix + '-',
+            minify: true
+          }
+        }]
+      }
+    }))
+    .pipe(svgstore())
+    .pipe(gulp.dest('dist/images/sprite'))
+})
 
 /**
  * Preprocess Sass files
@@ -16,9 +41,15 @@ const $ = gulpLoadPlugins()
 gulp.task('styles', () => {
   return gulp.src(config.paths.styles.all)
     .pipe($.plumber())
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.sass({
+      includePaths: ['./node_modules/']
+    }).on('error', $.sass.logError))
     .pipe(cssImport())
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'iOS 8.1'],
+      flexbox: true,
+      add: true
+    }))
     .pipe(gulp.dest(config.paths.styles.dest))
 })
 
@@ -82,9 +113,9 @@ gulp.task('lint:sass', () => {
 /**
  * Main app build
  */
-gulp.task('build', ['styles', 'html', 'images', 'fonts'], () => {
-  if (!fs.existsSync('resume.json')) {
-    fs.createReadStream('resume-sample.json').pipe(fs.createWriteStream('resume.json'))
+gulp.task('build', ['icons', 'styles', 'html', 'images', 'fonts'], () => {
+  if (!fs.existsSync(config.names.resume.data)) {
+    fs.createReadStream('resume-sample.json').pipe(fs.createWriteStream(config.names.resume.data))
   }
 
   return gulp.src(config.paths.dist.all).pipe(size({title: 'build', gzip: true}))

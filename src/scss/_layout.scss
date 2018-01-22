@@ -71,28 +71,34 @@ body {
 }
 
 [class^="section-"] .title {
+  $icon-bg-size: 32px;
+
   text-transform: uppercase;
   padding: $spacer $spacer 0;
   margin: 0;
-
-  .title-icon,
-  span {
-    display: inline-block;
-    vertical-align: middle;
-  }
+  display: flex;
+  align-items: center;
 
   span {
-    margin-left: 2px;
+    margin-left: 0.25rem;
+    flex: 1;
+    line-height: $icon-bg-size;
   }
 
   .title-icon {
-    $icon-bg-size: 2rem;
-
     background-color: darken($page-bg, 4%);
     border-radius: 50%;
     width: $icon-bg-size;
     height: $icon-bg-size;
-    padding: 0.4rem 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: $icon-bg-size;
+
+    svg {
+      flex: 1;
+      align-self: center;
+    }
   }
 }
 
