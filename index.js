@@ -59,7 +59,7 @@ handlebars.registerHelper({
 
 function render (resume, pageFormat) {
   let css = fs.readFileSync(path.join(__dirname, config.paths.styles.entry), 'utf-8')
-  let icons = fs.readFileSync(path.join(__dirname, 'dist/images/sprite/icons.svg'), 'utf-8')
+  let icons = fs.readFileSync(path.join(__dirname, config.paths.images.dest, 'images.svg'), 'utf-8')
   let resumeTemplate = fs.readFileSync(path.join(__dirname, config.paths.views.entry), 'utf-8')
   let Handlebars = handlebarsWax(handlebars)
 

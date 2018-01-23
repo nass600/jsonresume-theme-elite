@@ -1,6 +1,6 @@
 {
     "basics": {
-        "name": "Richard Hendriks",
+        "name": "Richard<br>Hendriks",
         "label": "Programmer",
         "picture": "http://www.piedpiper.com/app/themes/pied-piper/dist/images/richard.png",
         "email": "richard.hendriks@piedpiper.com",
@@ -16,14 +16,14 @@
         },
         "profiles": [
             {
-                "network": "Twitter",
-                "username": "siliconHBO",
-                "url": "https://twitter.com/siliconHBO"
-            },
-            {
                 "network": "Youtube",
                 "username": "HBO",
                 "url": "https://youtube.com/user/HBO"
+            },
+            {
+                "network": "Linkedin",
+                "username": "richardhendricks84",
+                "url": "https://www.linkedin.com/in/richardhendricks84/"
             },
             {
                 "network": "Vimeo",
@@ -129,7 +129,8 @@
             "endDate": "2013-01-01",
             "summary": "Global movement of free coding clubs for young people.",
             "highlights": [
-                "Awarded 'Teacher of the Month'"
+                "Awarded 'Teacher of the Month'",
+                "Best algorythm"
             ]
         }
     ],
@@ -139,7 +140,6 @@
             "area": "Computer Science",
             "studyType": "B.S",
             "startDate": "2011-06-01",
-            "endDate": "2014-01-01",
             "gpa": "GPA 4.0",
             "courses": [
                 "DB1101 - Basic SQL",
@@ -220,5 +220,5 @@
             "awarder": "Pied Piper",
             "summary": "Won 50 times in a row"
         }
-    ],
+    ]
 }

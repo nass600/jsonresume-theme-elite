@@ -5,15 +5,17 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th class="text-secondary">Language</th>
+                    <th class="flag-column text-secondary">Language</th>
                     <th class="text-secondary">Level</th>
                 </tr>
                 </thead>
                 <tbody>
                 {{#each resume.languages}}
                     <tr>
-                        <td>
-                            <div class="flag flag-{{lowercase name}}"></div>
+                        <td class="flag-column">
+                            <svg>
+                                <use xlink:href="#flag-{{lowercase name}}"></use>
+                            </svg>
                         </td>
                         <td>
                             {{level}}

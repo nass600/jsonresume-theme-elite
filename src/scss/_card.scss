@@ -8,14 +8,18 @@
 .card-header {
   padding: 0 $spacer 0;
   font-size: $font-size-h5;
+  line-height: 1;
 
   .card-dates {
     color: $page-secondary;
     display: inline-block;
   }
 
+  span {
+    vertical-align: middle;
+  }
+
   .badge {
-    vertical-align: baseline;
     margin-left: 0.25rem;
   }
 }

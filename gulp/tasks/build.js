@@ -10,15 +10,16 @@ import lazypipe from 'lazypipe'
 import config from '../../config'
 import svgstore from 'gulp-svgstore'
 import svgmin from 'gulp-svgmin'
+import sourcemaps from 'gulp-sourcemaps'
 
 const $ = gulpLoadPlugins()
 
 /**
- * Generate SVG sprite for icons
+ * Generate SVG symbols
  */
-gulp.task('icons', () => {
+gulp.task('images', () => {
   return gulp
-    .src('src/images/icons/*.svg')
+    .src(config.paths.images.all)
     .pipe(svgmin(file => {
       const prefix = path.basename(file.relative, path.extname(file.relative))
 
@@ -32,7 +33,7 @@ gulp.task('icons', () => {
       }
     }))
     .pipe(svgstore())
-    .pipe(gulp.dest('dist/images/sprite'))
+    .pipe(gulp.dest(config.paths.images.dest))
 })
 
 /**
@@ -41,6 +42,7 @@ gulp.task('icons', () => {
 gulp.task('styles', () => {
   return gulp.src(config.paths.styles.all)
     .pipe($.plumber())
+    .pipe(sourcemaps.init())
     .pipe($.sass({
       includePaths: ['./node_modules/']
     }).on('error', $.sass.logError))
@@ -50,6 +52,7 @@ gulp.task('styles', () => {
       flexbox: true,
       add: true
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.paths.styles.dest))
 })
 
@@ -66,17 +69,17 @@ gulp.task('html', () => {
     .pipe(gulp.dest(config.paths.views.dest))
 })
 
-/**
- * Image minification
- */
-gulp.task('images', () => {
-  return gulp.src(config.paths.images.all)
-    .pipe($.cache($.imagemin({
-      progressive: true,
-      interlaced: true
-    })))
-    .pipe(gulp.dest(config.paths.images.dest))
-})
+// /**
+//  * Image minification
+//  */
+// gulp.task('images', () => {
+//   return gulp.src(config.paths.images.all)
+//     .pipe($.cache($.imagemin({
+//       progressive: true,
+//       interlaced: true
+//     })))
+//     .pipe(gulp.dest(config.paths.images.dest))
+// })
 
 /**
  * Copy fonts
@@ -113,7 +116,7 @@ gulp.task('lint:sass', () => {
 /**
  * Main app build
  */
-gulp.task('build', ['icons', 'styles', 'html', 'images', 'fonts'], () => {
+gulp.task('build', ['styles', 'html', 'images', 'fonts'], () => {
   if (!fs.existsSync(config.names.resume.data)) {
     fs.createReadStream('resume-sample.json').pipe(fs.createWriteStream(config.names.resume.data))
   }

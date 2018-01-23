@@ -10,19 +10,19 @@
                         {{formatDate startDate}} - {{formatDate endDate}} ({{dateDiff startDate endDate}})
                     </span>
                         {{#unless endDate}}
-                            <span class="badge badge-outline-success">current</span>
+                            <span class="badge badge-success">current</span>
                         {{/unless}}
                     </div>
                 {{/if}}
 
                 {{#if studyType}}
                     <div class="card-block">
-                        <h4 class="card-title">
+                        <h3 class="card-title">
                             {{studyType}} {{area}}
                             {{#if institution}}
                                 <span class="card-subtitle">{{institution}}</span>
                             {{/if}}
-                        </h4>
+                        </h3>
                         {{#if courses.length}}
                             <div class="card-text">
                                 <ul>

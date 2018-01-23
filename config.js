@@ -14,7 +14,7 @@ module.exports = {
       partials: 'dist/views/partials/**/*.hbs'
     },
     images: {
-      all: 'src/images/**/*',
+      all: 'src/images/**/*.svg',
       dest: 'dist/images'
     },
     fonts: {
