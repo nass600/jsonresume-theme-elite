@@ -8,14 +8,18 @@
 .card-header {
   padding: 0 $spacer 0;
   font-size: $font-size-h5;
+  line-height: 1;
 
   .card-dates {
     color: $page-secondary;
     display: inline-block;
   }
 
+  span {
+    vertical-align: middle;
+  }
+
   .badge {
-    vertical-align: baseline;
     margin-left: 0.25rem;
   }
 }
@@ -68,19 +72,27 @@
     left: 0;
   }
 
+
+  .icon-item {
+    svg {
+      width: 10px;
+      height: 1rem;
+    }
+
+    div,
+    span,
+    a {
+      margin-left: 6px;
+    }
+  }
+
   .card-link {
-    display: block;
-    position: relative;
 
     span {
-      margin-left: 1rem;
       color: inherit;
     }
 
-    & + .card-highlights {
-      margin-top: 0.5rem;
-    }
-
+    & + .card-highlights,
     & + .card-tags {
       margin-top: 0.25rem;
     }
@@ -93,10 +105,6 @@
 
   .card-tags {
     position: relative;
-
-    .tag-list {
-      margin-left: 1rem;
-    }
 
     .tag {
       margin-left: 0;

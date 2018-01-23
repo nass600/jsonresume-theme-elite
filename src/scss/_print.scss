@@ -9,19 +9,6 @@
     width: 100%;
     margin: 0;
     box-shadow: none;
-    display: -webkit-box;
-    display: -webkit-flex;
-    -webkit-flex-wrap: wrap;
-  }
-
-  .sidebar {
-    -webkit-box-flex: 0 0 $sidebar-width;
-    -webkit-flex: 0 0 $sidebar-width;
-  }
-
-  .content {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
   }
 
   .section-summary,

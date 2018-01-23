@@ -17,12 +17,39 @@ body {
     background-color: $sidebar-bg;
     color: $sidebar-color;
     flex: 0 0 $sidebar-width;
+    width: $sidebar-width;
   }
 
   .content {
     flex: 1;
     background-color: $page-bg;
     color: $page-color;
+    position: relative;
+
+    .watermark {
+      $watermark-height: 12px;
+
+      opacity: 0.3;
+      position: absolute;
+      top: $spacer;
+      right: $spacer;
+      display: flex;
+      align-items: center;
+      width: 90px;
+
+      span {
+        flex: 1;
+        text-align: right;
+        margin-right: 0.2rem;
+        font-size: 0.5rem;
+        line-height: 1;
+      }
+
+      svg {
+        flex-basis: $watermark-height;
+        height: $watermark-height;
+      }
+    }
   }
 }
 
@@ -71,28 +98,35 @@ body {
 }
 
 [class^="section-"] .title {
+  $icon-bg-size: 28px;
+
   text-transform: uppercase;
   padding: $spacer $spacer 0;
   margin: 0;
-
-  .title-icon,
-  span {
-    display: inline-block;
-    vertical-align: middle;
-  }
+  display: flex;
+  align-items: center;
 
   span {
-    margin-left: 2px;
+    margin-left: 0.25rem;
+    flex: 1;
+    line-height: 1;
   }
 
   .title-icon {
-    $icon-bg-size: 2rem;
-
     background-color: darken($page-bg, 4%);
     border-radius: 50%;
     width: $icon-bg-size;
     height: $icon-bg-size;
-    padding: 0.4rem 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: $icon-bg-size;
+
+    svg {
+      flex: 1;
+      align-self: center;
+      height: $h2-font-size;
+    }
   }
 }
 

@@ -1,0 +1,40 @@
+{{#if resume.education.length}}
+    <section class="section-education">
+        {{> components/title icon='book' title='Education'}}
+
+        {{#each resume.education}}
+            <div class="card">
+                {{#if startDate}}
+                    <div class="card-header">
+                    <span class="card-text card-dates">
+                        {{formatDate startDate}} - {{formatDate endDate}} ({{dateDiff startDate endDate}})
+                    </span>
+                        {{#unless endDate}}
+                            <span class="badge badge-success">current</span>
+                        {{/unless}}
+                    </div>
+                {{/if}}
+
+                {{#if studyType}}
+                    <div class="card-block">
+                        <h3 class="card-title">
+                            {{studyType}} {{area}}
+                            {{#if institution}}
+                                <span class="card-subtitle">{{institution}}</span>
+                            {{/if}}
+                        </h3>
+                        {{#if courses.length}}
+                            <div class="card-text">
+                                <ul>
+                                    {{#each courses}}
+                                        <li>{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        {{/if}}
+                    </div>
+                {{/if}}
+            </div>
+        {{/each}}
+    </section>
+{{/if}}

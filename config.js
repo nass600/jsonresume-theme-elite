@@ -11,11 +11,10 @@ module.exports = {
       all: 'src/views/**/*.hbs',
       dest: 'dist/views',
       entry: 'dist/views/resume.hbs',
-      partials: 'dist/views/partials/**/*.hbs',
-      components: 'dist/views/components/**/*.hbs'
+      partials: 'dist/views/partials/**/*.hbs'
     },
     images: {
-      all: 'src/images/**/*',
+      all: 'src/images/**/*.svg',
       dest: 'dist/images'
     },
     fonts: {
@@ -25,8 +24,8 @@ module.exports = {
     styles: {
       cache: '.sass-cache',
       all: 'src/scss/**/*.scss',
-      dest: 'dist/styles',
-      entry: 'dist/styles/main.css'
+      dest: 'dist/css',
+      entry: 'dist/css/elite.css'
     },
     js: {
       all: '**/*.js'
@@ -35,7 +34,8 @@ module.exports = {
   names: {
     resume: {
       data: 'resume.json',
-      dest: 'resume'
+      dest: 'resume',
+      pdf: './resume.pdf'
     }
   }
 }

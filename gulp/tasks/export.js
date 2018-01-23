@@ -7,6 +7,32 @@ const packageJson = require('../../package.json')
 const config = require('../../config.js')
 const elite = require('../..')
 
+/**
+ * Link npm library itself
+ */
+gulp.task('link', function (cb) {
+  let command = 'npm link'
+
+  exec(command, function (err, stdout, stderr) {
+    console.log(stdout)
+    console.log(stderr)
+    cb(err)
+  })
+})
+
+/**
+ * Unlink npm library itself
+ */
+gulp.task('unlink', function (cb) {
+  let command = 'npm unlink'
+
+  exec(command, function (err, stdout, stderr) {
+    console.log(stdout)
+    console.log(stderr)
+    cb(err)
+  })
+})
+
 gulp.task('export', ['build', 'link'], function (cb) {
   let format = args.format || 'pdf'
   let pageFormat = args.pageFormat || 'Letter'

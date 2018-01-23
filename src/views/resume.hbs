@@ -9,24 +9,33 @@
     </style>
 </head>
 <body>
+    <div class="d-none">
+        {{{icons}}}
+    </div>
     <div class="page">
         <div class="sidebar">
-            {{> basic }}
-            {{> contact }}
-            {{> skills-progress }}
+            {{> sections/basic }}
+            {{> sections/contact }}
+            {{> sections/skills-progress }}
         </div>
         <div class="content">
-            {{> summary }}
-            {{> work }}
-            {{> education }}
-            {{> awards }}
-            {{> publications }}
-            {{> volunteer }}
-            {{> skills }}
-            {{> languages }}
-            {{> interests }}
-            {{> references }}
-            {{> certifications }}
+            <div class="watermark">
+                <span class="text-secondary">Generated with</span>
+                <svg>
+                    <use xlink:href="#nodejs"></use>
+                </svg>
+            </div>
+            {{> sections/summary }}
+            {{> sections/work }}
+            {{> sections/education }}
+            {{> sections/awards }}
+            {{> sections/publications }}
+            {{> sections/volunteer }}
+            {{> sections/skills }}
+            {{> sections/languages }}
+            {{> sections/interests }}
+            {{> sections/references }}
+            {{> sections/certifications }}
         </div>
     </div>
 

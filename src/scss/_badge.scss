@@ -2,7 +2,7 @@
 // ----------------------------------------------
 
 .badge-outline-success {
-  @include badge-outline-variant($badge-success-bg);
+  @include badge-outline-variant($success);
 }
 
 .badge-outline-secondary {

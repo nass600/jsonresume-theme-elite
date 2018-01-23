@@ -1,0 +1,31 @@
+{{#if resume.skills.length}}
+    <section class="section-skills">
+        {{> components/title icon='tasks' title='Skills'}}
+        <table>
+            <tbody>
+            {{#each resume.skills}}
+                <tr class="skill">
+                    {{#if name}}
+                        <td class="name text-secondary">
+                            {{name}}
+                        </td>
+                    {{/if}}
+                    {{#if level}}
+                        <td class="cell-progress">
+                            <ul class="progress-dots">
+                                {{#times 5}}
+                                    {{#lte this ../level}}
+                                        <li class="dot active"></li>
+                                    {{else}}
+                                        <li class="dot"></li>
+                                    {{/lte}}
+                                {{/times}}
+                            </ul>
+                        </td>
+                    {{/if}}
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </section>
+{{/if}}

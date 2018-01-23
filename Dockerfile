@@ -4,7 +4,7 @@ MAINTAINER Ignacio Velazquez <ivelazquez85@gmail.com>
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-RUN npm install --silent -g resume-cli gulp
+RUN npm install --silent -g phantomjs-prebuilt resume-cli gulp -unsafe-perm
 
 COPY package.json /usr/src/app
 RUN npm install --silent
