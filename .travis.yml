@@ -12,4 +12,3 @@ script:
   - node -r babel-register ./node_modules/.bin/gulp
   - resume test
   - resume export test-resume.pdf --format pdf --theme elite
-  - rm test-resume.pdf
