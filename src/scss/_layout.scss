@@ -49,6 +49,10 @@ body {
         flex-basis: $watermark-height;
         height: $watermark-height;
       }
+
+      @if $enable-watermark == false {
+        display: none;
+      }
     }
   }
 }
@@ -127,27 +131,5 @@ body {
       align-self: center;
       height: $h2-font-size;
     }
-  }
-}
-
-@if $enable-skills-sidebar == true {
-  .sidebar .section-skills {
-    display: block;
-  }
-
-  .content .section-skills {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@else {
-  .sidebar .section-skills {
-    display: none;
-    visibility: hidden;
-  }
-
-  .content .section-skills {
-    display: block;
   }
 }

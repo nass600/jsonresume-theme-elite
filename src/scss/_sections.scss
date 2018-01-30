@@ -1,6 +1,9 @@
 // Sections
 // ----------------------------------------------
 
+// Section Summary
+// --------------------------------------------------------
+
 .section-summary {
   p {
     text-align: justify;
@@ -12,9 +15,27 @@
   }
 }
 
+// Section Skills
+// --------------------------------------------------------
+
 .content .section-skills {
-  .card + .card {
+  .card-block {
     padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  ul li {
+    .li-title {
+      font-weight: bold;
+    }
+
+    .li-title + .li-subtitle {
+      color: $color-secondary;
+    }
+
+    & + li {
+      margin-top: 0.25rem;
+    }
   }
 }
 
@@ -39,12 +60,36 @@
     @include clearfix;
 
     .name {
-      text-transform: uppercase;
       float: left;
       margin-bottom: 0;
     }
   }
 }
+
+@if $enable-skills-sidebar == true {
+  .sidebar .section-skills {
+    display: block;
+  }
+
+  .content .section-skills {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@else {
+  .sidebar .section-skills {
+    display: none;
+    visibility: hidden;
+  }
+
+  .content .section-skills {
+    display: block;
+  }
+}
+
+// Section Basic
+// --------------------------------------------------------
 
 .section-basic {
   text-align: center;
@@ -86,6 +131,9 @@
   }
 }
 
+// Section Contact
+// --------------------------------------------------------
+
 .section-contact {
   $icon-width: 16px;
 
@@ -114,13 +162,22 @@
   }
 }
 
+// Section Education
+// --------------------------------------------------------
+
 .section-education .card-block {
   padding-bottom: 0;
 }
 
+// Section Interests
+// --------------------------------------------------------
+
 .section-interests .card-block {
   padding-top: 0;
 }
+
+// Section References
+// --------------------------------------------------------
 
 .section-references .card-block {
   padding-top: 0;

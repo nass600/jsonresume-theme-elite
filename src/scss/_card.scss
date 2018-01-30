@@ -13,6 +13,12 @@
   .card-dates {
     color: $page-secondary;
     display: inline-block;
+
+    @if $enable-work-duration == false {
+      .duration {
+        display: none;
+      }
+    }
   }
 
   span {
@@ -32,7 +38,7 @@
     margin-bottom: 0;
 
     & + .card-text {
-      margin-top: 8px;
+      margin-top: 6px;
     }
   }
 
@@ -42,6 +48,10 @@
 
   .card-text {
     text-align: justify;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
 
     ul li {
       padding-left: 1rem;
@@ -102,20 +112,29 @@
     padding: 0;
     margin: 0;
   }
+}
 
-  .card-tags {
-    position: relative;
+.card .card-tags {
+  position: relative;
 
-    .tag {
-      margin-left: 0;
+  svg {
+    width: 10px;
+    height: 1rem;
+  }
 
-      &::after {
-        content: ",";
-      }
+  .tag-list {
+    margin-left: 6px;
+  }
 
-      &:last-of-type::after {
-        content: '';
-      }
+  .tag {
+    margin-left: 0;
+
+    &::after {
+      content: ",";
+    }
+
+    &:last-of-type::after {
+      content: '';
     }
   }
 }

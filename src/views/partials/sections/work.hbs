@@ -7,7 +7,12 @@
                 {{#if startDate}}
                     <div class="card-header">
                         <span class="card-text card-dates">
-                            {{formatDate startDate}} - {{formatDate endDate}} ({{dateDiff startDate endDate}})
+                            <span class="date-range">
+                                {{formatDate startDate}} - {{formatDate endDate}}
+                                </span>
+                                <span class="duration">
+                                    ({{dateDiff startDate endDate}})
+                                </span>
                         </span>
                         {{#unless endDate}}
                             <span class="badge badge-success">current</span>
