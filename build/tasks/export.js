@@ -4,7 +4,7 @@ const gulp = require('gulp')
 const args = require('yargs').argv
 const exec = require('child_process').exec
 const packageJson = require('../../package.json')
-const config = require('../../config.js')
+const config = require('../config.js')
 const elite = require('../..')
 
 /**

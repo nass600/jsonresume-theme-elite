@@ -7,7 +7,7 @@ import gulpLoadPlugins from 'gulp-load-plugins'
 import eslint from 'gulp-eslint'
 import gulpStylelint from 'gulp-stylelint'
 import lazypipe from 'lazypipe'
-import config from '../../config'
+import config from '../config'
 import svgstore from 'gulp-svgstore'
 import svgmin from 'gulp-svgmin'
 import sourcemaps from 'gulp-sourcemaps'
@@ -68,18 +68,6 @@ gulp.task('html', () => {
     .pipe($.useref({searchPath: '{src, .}'}))
     .pipe(gulp.dest(config.paths.views.dest))
 })
-
-// /**
-//  * Image minification
-//  */
-// gulp.task('images', () => {
-//   return gulp.src(config.paths.images.all)
-//     .pipe($.cache($.imagemin({
-//       progressive: true,
-//       interlaced: true
-//     })))
-//     .pipe(gulp.dest(config.paths.images.dest))
-// })
 
 /**
  * Copy fonts

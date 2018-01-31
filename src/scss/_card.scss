@@ -13,12 +13,6 @@
   .card-dates {
     color: $page-secondary;
     display: inline-block;
-
-    @if $enable-work-duration == false {
-      .duration {
-        display: none;
-      }
-    }
   }
 
   span {

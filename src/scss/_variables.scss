@@ -1,13 +1,6 @@
 // Variables
 // ----------------------------------------------
 
-// Toggles
-
-$enable-avatar: true;
-$enable-skills-sidebar: true;
-$enable-work-duration: true;
-$enable-watermark: true;
-
 // Colors
 
 $background-bg: #424546;
@@ -67,7 +60,6 @@ $el-bitbucket: "\e159";
 
 $font-family-sans-serif: 'Maven Pro', sans-serif;
 $font-size-base: 0.668rem;
-// $font-size-h1: 1.3rem;
 $h1-font-size: $font-size-base * 2;
 $h2-font-size: $font-size-base * 1.5;
 $h3-font-size: $font-size-base * 1.2;
@@ -83,8 +75,8 @@ $avatar-size: 90px;
 
 // Tables
 
-$table-cell-padding: 0.25rem;
-$table-border-color: darken($page-bg, 4%);
+$table-cell-padding: 0.5rem;
+$table-border-color: transparent;
 
 // Progress Bars
 

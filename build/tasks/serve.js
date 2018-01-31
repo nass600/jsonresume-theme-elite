@@ -1,7 +1,7 @@
 import gulp from 'gulp'
 import { exec } from 'child_process'
 import browserSync from 'browser-sync'
-import config from '../../config'
+import config from '../config'
 
 const browserSyncInstance = browserSync.create()
 /**

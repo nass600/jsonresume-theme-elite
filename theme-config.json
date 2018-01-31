@@ -1,0 +1,8 @@
+{
+    "avatar": true,
+    "sidebarSkills": true,
+    "sidebarLanguages": true,
+    "workDuration": true,
+    "educationDuration": true,
+    "watermark": true
+}

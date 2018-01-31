@@ -49,10 +49,6 @@ body {
         flex-basis: $watermark-height;
         height: $watermark-height;
       }
-
-      @if $enable-watermark == false {
-        display: none;
-      }
     }
   }
 }

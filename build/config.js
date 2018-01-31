@@ -29,7 +29,8 @@ module.exports = {
     },
     js: {
       all: '**/*.js'
-    }
+    },
+    themeConfig: 'theme-config.json'
   },
   names: {
     resume: {

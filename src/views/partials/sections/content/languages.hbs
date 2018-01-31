@@ -1,0 +1,28 @@
+{{#if resume.languages.length}}
+    <section class="section-languages">
+        {{> components/title icon='comments' title='Languages'}}
+        <div class="card">
+            <div class="card-block">
+                <table class="table">
+                    <tbody>
+                    {{#each resume.languages}}
+                        <tr>
+                            <td class="column-flag">
+                                <svg>
+                                    <use xlink:href="#flag-{{lowercase name}}"></use>
+                                </svg>
+                            </td>
+                            <td class="column-name">
+                                {{capitalizeEach name}}
+                            </td>
+                            <td class="column-level text-secondary">
+                                {{level}}
+                            </td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+{{/if}}

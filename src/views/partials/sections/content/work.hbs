@@ -1,7 +1,6 @@
 {{#if resume.work.length}}
     <section class="section-work">
         {{> components/title icon='briefcase' title='Experience'}}
-
         {{#each resume.work}}
             <div class="card">
                 {{#if startDate}}
@@ -9,10 +8,12 @@
                         <span class="card-text card-dates">
                             <span class="date-range">
                                 {{formatDate startDate}} - {{formatDate endDate}}
-                                </span>
+                            </span>
+                            {{#if ../themeConfig.workDuration}}
                                 <span class="duration">
                                     ({{dateDiff startDate endDate}})
                                 </span>
+                            {{/if}}
                         </span>
                         {{#unless endDate}}
                             <span class="badge badge-success">current</span>

@@ -14,27 +14,3 @@
   font-weight: normal;
   background-color: darken($page-bg, 4%);
 }
-
-.table tbody {
-  border-bottom: 1px solid $table-border-color;
-}
-
-.table .name-column {
-  padding: $table-cell-padding $table-cell-padding*4;
-}
-
-.table .name-column,
-.table .flag-column {
-  width: 1%;
-}
-
-.table .flag-column {
-  svg {
-    $size: 20px;
-    display: block;
-    max-height: 100%;
-
-    width: $size;
-    height: $size;
-  }
-}

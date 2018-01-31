@@ -14,28 +14,34 @@
     </div>
     <div class="page">
         <div class="sidebar">
-            {{> sections/basic }}
-            {{> sections/contact }}
-            {{> sections/skills-progress }}
+            {{> sections/sidebar/basic }}
+            {{> sections/sidebar/contact }}
+            {{#if themeConfig.sidebarSkills}}
+                {{> sections/sidebar/skills }}
+            {{/if}}
+            {{#if themeConfig.sidebarLanguages}}
+                {{> sections/sidebar/languages }}
+            {{/if}}
         </div>
         <div class="content">
-            <div class="watermark">
-                <span class="text-secondary">Generated with</span>
-                <svg>
-                    <use xlink:href="#nodejs"></use>
-                </svg>
-            </div>
-            {{> sections/summary }}
-            {{> sections/work }}
-            {{> sections/education }}
-            {{> sections/awards }}
-            {{> sections/publications }}
-            {{> sections/volunteer }}
-            {{> sections/skills }}
-            {{> sections/languages }}
-            {{> sections/interests }}
-            {{> sections/references }}
-            {{> sections/certifications }}
+            {{#if themeConfig.watermark}}
+                {{> sections/content/watermark }}
+            {{/if}}
+            {{> sections/content/summary }}
+            {{> sections/content/work }}
+            {{> sections/content/education }}
+            {{> sections/content/awards }}
+            {{> sections/content/publications }}
+            {{> sections/content/volunteer }}
+            {{#unless themeConfig.sidebarSkills}}
+                {{> sections/content/skills }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarLanguages}}
+                {{> sections/content/languages }}
+            {{/unless}}
+            {{> sections/content/interests }}
+            {{> sections/content/references }}
+            {{> sections/content/certifications }}
         </div>
     </div>
 
