@@ -1,6 +1,6 @@
 {{#if resume.basics}}
     <section class="section-contact">
-        {{> components/title icon='phone' title='Contact'}}
+        {{> components/title icon='web' title='Contact'}}
         <ul>
             {{#if resume.basics.email}}
                 <li class="icon-item clearfix">
@@ -35,19 +35,5 @@
                 </li>
             {{/if}}
         </ul>
-        {{#if resume.basics.profiles.length}}
-            <ul>
-                {{#each resume.basics.profiles}}
-                    <li class="icon-item clearfix">
-                        <svg class="text-primary">
-                            <use xlink:href="#{{sanitizeLowercase network}}"></use>
-                        </svg>
-                        <a class="text-secondary" href="{{url}}">
-                            {{removeSchema url}}
-                        </a>
-                    </li>
-                {{/each}}
-            </ul>
-        {{/if}}
     </section>
 {{/if}}

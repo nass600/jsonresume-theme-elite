@@ -2,6 +2,7 @@
     "avatar": true,
     "sidebarSkills": true,
     "sidebarLanguages": true,
+    "sidebarInterests": true,
     "workDuration": true,
     "educationDuration": true,
     "watermark": true

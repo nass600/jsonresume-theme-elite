@@ -16,11 +16,15 @@
         <div class="sidebar">
             {{> sections/sidebar/basic }}
             {{> sections/sidebar/contact }}
+            {{> sections/sidebar/social }}
             {{#if themeConfig.sidebarSkills}}
                 {{> sections/sidebar/skills }}
             {{/if}}
             {{#if themeConfig.sidebarLanguages}}
                 {{> sections/sidebar/languages }}
+            {{/if}}
+            {{#if themeConfig.sidebarInterests}}
+                {{> sections/sidebar/interests }}
             {{/if}}
         </div>
         <div class="content">
@@ -39,7 +43,9 @@
             {{#unless themeConfig.sidebarLanguages}}
                 {{> sections/content/languages }}
             {{/unless}}
-            {{> sections/content/interests }}
+            {{#unless themeConfig.sidebarInterests}}
+                {{> sections/content/interests }}
+            {{/unless}}
             {{> sections/content/references }}
             {{> sections/content/certifications }}
         </div>

@@ -11,23 +11,12 @@ Elite theme for [JSONResume](https://jsonresume.org/)
 ## TOC
 
 1. [Installation](#installtion)
-2. [Development](#development)
+2. [Preview](#preview)
 3. [Generating your resume in PDF](#generating-your-resume-in-pdf)
 4. [Resume data](docs/RESUME_DATA.md)
 5. [Design customizations](docs/DESIGN_CUSTOMIZATIONS.md)
 
 ## Installation
-
-### Using Docker (recommended)
-
-This project comes with a Dockerfile to provide you the needed software dependencies. Installation
-is via docker compose by running:
-
-```bash
-docker-compose build
-```
-
-### Local environment
 
 If you want to generate your resume directly from this repository, the installation is
 the same as any other javascript project with NPM dependencies.
@@ -36,19 +25,16 @@ the same as any other javascript project with NPM dependencies.
 npm install
 ```
 
-### As an NPM dependency
+#### Using Docker (recommended)
 
-If you want to add this theme as a dependency run the following command in your project:
+This project comes with a Dockerfile to provide you the needed software dependencies. You can build the container by running:
 
 ```bash
-npm install --save jsonresume-theme-elite
+docker-compose build
 ```
 
 
-
-
-
-## Development
+## Preview
 
 If you need to do some modifications in the design you can serve the
 resume in the browser in one of the following ways.
@@ -77,9 +63,6 @@ would be reloaded to render the latest changes.
 
 
 
-
-
-
 ## Generating your resume in PDF
 
 By default the latest version of resume-cli only supports rendering the
@@ -95,7 +78,7 @@ supported by [PhantomJS](http://phantomjs.org/api/webpage/property/paper-size.ht
 + Letter
 + Tabloid
 
-Again, you have some ways of exporting the resume depending on your environment:
+Again, you have two ways of exporting the resume depending on your environment:
 
 ### Using Docker (recommended)
 

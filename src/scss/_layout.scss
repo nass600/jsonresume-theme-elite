@@ -68,13 +68,16 @@ body {
     font-size: 0.9rem;
     line-height: 0.9rem;
     text-align: center;
+    justify-content: center;
 
     .title-icon {
       background-color: transparent;
       padding: 0;
-      width: auto;
       height: auto;
-      display: none;
+      width: 1rem;
+      flex-basis: 1rem;
+      margin-right: 0.5rem;
+      justify-content: center;
     }
 
     span {
@@ -108,7 +111,6 @@ body {
 
   span {
     margin-left: 0.25rem;
-    flex: 1;
     line-height: 1;
   }
 

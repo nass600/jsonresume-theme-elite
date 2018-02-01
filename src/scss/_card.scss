@@ -109,24 +109,22 @@
 }
 
 .card .card-tags {
-  position: relative;
-
   svg {
     width: 10px;
     height: 1rem;
   }
+}
 
-  .tag-list {
-    margin-left: 6px;
-  }
+.tag-list {
+  margin-left: 6px;
 
   .tag {
-    margin-left: 0;
-
+    margin-left: 0 !important;
+  
     &::after {
       content: ",";
     }
-
+  
     &:last-of-type::after {
       content: '';
     }

@@ -7,10 +7,9 @@
 
 .table td {
   vertical-align: middle;
+  border-top: 0;
 }
 
-.table thead th {
-  border-bottom-width: 1px;
-  font-weight: normal;
-  background-color: darken($page-bg, 4%);
+.table tbody tr:first-child td {
+  padding-top: 0;
 }

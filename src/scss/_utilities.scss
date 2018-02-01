@@ -2,18 +2,22 @@
 // ----------------------------------------------
 
 .text-primary {
-  fill: $color-primary;
-
   .sidebar & {
     color: $sidebar-primary !important;
+    fill: $sidebar-primary;
+
+    svg {
+      fill: $sidebar-primary;
+    }
   }
 
   .content & {
     color: $page-primary !important;
-  }
+    fill: $page-primary;
 
-  svg {
-    fill: $color-primary;
+    svg {
+      fill: $page-primary;
+    }
   }
 }
 

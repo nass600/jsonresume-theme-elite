@@ -137,8 +137,23 @@
 // Section Interests
 // --------------------------------------------------------
 
-.section-interests .card-block {
+.content .section-interests .card-block {
   padding-top: 0;
+
+  .tag-list {
+    display: inline-block;
+  }
+}
+
+.sidebar .section-interests {
+
+  li + li {
+    margin-top: 0.5rem;
+  }
+
+  .tag-list {
+    margin-left: 0;
+  }
 }
 
 // Section References
@@ -179,4 +194,17 @@
   .table .column-level {
     padding-right: 0;
   }
+}
+
+.sidebar .section-languages {
+  $size: 16px;
+
+  .table .column-flag {
+    width: $size;
+
+    svg {
+      width: $size;
+      height: $size;
+    }
+  } 
 }
