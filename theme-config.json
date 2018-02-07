@@ -3,7 +3,9 @@
     "sidebarSkills": true,
     "sidebarLanguages": true,
     "sidebarInterests": true,
+    "sidebarAwards": true,
     "workDuration": true,
     "educationDuration": true,
+    "awardDateSince": false,
     "watermark": true
 }

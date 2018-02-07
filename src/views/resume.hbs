@@ -23,6 +23,9 @@
             {{#if themeConfig.sidebarLanguages}}
                 {{> sections/sidebar/languages }}
             {{/if}}
+            {{#if themeConfig.sidebarAwards}}
+                {{> sections/sidebar/awards }}
+            {{/if}}
             {{#if themeConfig.sidebarInterests}}
                 {{> sections/sidebar/interests }}
             {{/if}}
@@ -34,7 +37,10 @@
             {{> sections/content/summary }}
             {{> sections/content/work }}
             {{> sections/content/education }}
-            {{> sections/content/awards }}
+
+            {{#unless themeConfig.sidebarAwards}}
+                {{> sections/content/awards }}
+            {{/unless}}
             {{> sections/content/publications }}
             {{> sections/content/volunteer }}
             {{#unless themeConfig.sidebarSkills}}

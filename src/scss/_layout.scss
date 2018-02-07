@@ -18,6 +18,10 @@ body {
     color: $sidebar-color;
     flex: 0 0 $sidebar-width;
     width: $sidebar-width;
+
+    a {
+      color: $sidebar-color;
+    }
   }
 
   .content {

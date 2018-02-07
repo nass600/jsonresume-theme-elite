@@ -5,19 +5,19 @@
             {{#if resume.basics.email}}
                 <li class="icon-item clearfix">
                     <svg class="text-primary"><use xlink:href="#envelope"></use></svg>
-                    <span class="text-secondary">{{resume.basics.email}}</span>
+                    <span>{{resume.basics.email}}</span>
                 </li>
             {{/if}}
             {{#if resume.basics.phone}}
                 <li class="icon-item clearfix">
                     <svg class="text-primary"><use xlink:href="#phone"></use></svg>
-                    <span class="text-secondary">{{resume.basics.phone}}</span>
+                    <span>{{resume.basics.phone}}</span>
                 </li>
             {{/if}}
             {{#if resume.basics.website}}
                 <li class="icon-item clearfix">
                     <svg class="text-primary"><use xlink:href="#link"></use></svg>
-                    <a class="text-secondary" href="{{resume.basics.website}}">
+                    <a href="{{resume.basics.website}}">
                         {{removeSchema resume.basics.website}}
                     </a>
                 </li>
@@ -25,13 +25,13 @@
             {{#if resume.basics.location}}
                 <li class="icon-item clearfix">
                     <svg class="text-primary"><use xlink:href="#map-marker"></use></svg>
-                    <span class="text-secondary">
+                    <span>
                     {{resume.basics.location.address}}
                         {{resume.basics.location.postalCode}}
                         {{resume.basics.location.city}}
                         {{resume.basics.location.region}}
                         {{resume.basics.location.countryCode}}
-                </span>
+                    </span>
                 </li>
             {{/if}}
         </ul>

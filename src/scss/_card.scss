@@ -130,3 +130,26 @@
     }
   }
 }
+
+.sidebar .card {
+  padding: 0;
+
+  .card-header,
+  .card-block {
+    padding-left: 0;
+    padding-right: 0;
+
+    .card-title {
+      text-transform: none; 
+    }
+  }
+
+  .card-block {
+    padding-top: $spacer/4;
+    padding-bottom: 0;
+  }
+
+  & + .card {
+    padding-top: $spacer;
+  }
+}
