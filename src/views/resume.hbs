@@ -29,6 +29,18 @@
             {{#if themeConfig.sidebarInterests}}
                 {{> sections/sidebar/interests }}
             {{/if}}
+            {{#if themeConfig.sidebarPublications}}
+                {{> sections/sidebar/publications }}
+            {{/if}}
+            {{#if themeConfig.sidebarCertifications}}
+                {{> sections/sidebar/certifications }}
+            {{/if}}
+            {{#if themeConfig.sidebarReferences}}
+                {{> sections/sidebar/references }}
+            {{/if}}
+            {{#if themeConfig.sidebarVolunteer}}
+                {{> sections/sidebar/volunteer }}
+            {{/if}}
         </div>
         <div class="content">
             {{#if themeConfig.watermark}}
@@ -41,8 +53,12 @@
             {{#unless themeConfig.sidebarAwards}}
                 {{> sections/content/awards }}
             {{/unless}}
-            {{> sections/content/publications }}
-            {{> sections/content/volunteer }}
+            {{#unless themeConfig.sidebarPublications}}
+                {{> sections/content/publications }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarVolunteer}}
+                {{> sections/content/volunteer }}
+            {{/unless}}
             {{#unless themeConfig.sidebarSkills}}
                 {{> sections/content/skills }}
             {{/unless}}
@@ -52,8 +68,12 @@
             {{#unless themeConfig.sidebarInterests}}
                 {{> sections/content/interests }}
             {{/unless}}
-            {{> sections/content/references }}
-            {{> sections/content/certifications }}
+            {{#unless themeConfig.sidebarReferences}}
+                {{> sections/content/references }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarCertifications}}
+                {{> sections/content/certifications }}
+            {{/unless}}
         </div>
     </div>
 

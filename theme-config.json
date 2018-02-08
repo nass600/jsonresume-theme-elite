@@ -4,8 +4,14 @@
     "sidebarLanguages": true,
     "sidebarInterests": true,
     "sidebarAwards": true,
+    "sidebarPublications": true,
+    "sidebarCertifications": true,
+    "sidebarReferences": true,
+    "sidebarVolunteer": true,
     "workDuration": true,
     "educationDuration": true,
+    "volunteerDuration": false,
     "awardDateSince": false,
+    "certifcationDateSince": false,
     "watermark": true
 }

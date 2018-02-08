@@ -24,38 +24,14 @@
 
                 {{#if position}}
                     <div class="card-block">
-                        <h3 class="card-title">
+                        <h4 class="card-title">
                             {{position}}
                             {{#if organization}}
                                 <span class="card-subtitle">{{organization}}</span>
                             {{/if}}
-                        </h3>
-                        {{#if summary}}
-                            <div class="card-text">{{{summary}}}</div>
-                        {{/if}}
+                        </h4>
                     </div>
                 {{/if}}
-                {{#or highlights.length website}}
-                    <div class="card-footer text-muted">
-                        {{#if website.length}}
-                            <a class="card-link icon-item text-secondary" href="{{website}}">
-                                <svg class="text-primary">
-                                    <use xlink:href="#link"></use>
-                                </svg>
-                                <span>{{website}}</span>
-                            </a>
-                        {{/if}}
-                        {{#if highlights.length}}
-                            <ul class="card-highlights">
-                                {{#each highlights}}
-                                    <li class="badge badge-outline-secondary">
-                                        {{this}}
-                                    </li>
-                                {{/each}}
-                            </ul>
-                        {{/if}}
-                    </div>
-                {{/or}}
             </div>
         {{/each}}
     </section>

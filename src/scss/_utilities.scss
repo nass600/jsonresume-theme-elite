@@ -53,3 +53,8 @@
     margin-left: $spacer;
   }
 }
+
+.hyphenate {
+  word-break: break-word;
+  hyphens: auto;
+}
