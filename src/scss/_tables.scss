@@ -7,15 +7,9 @@
 
 .table td {
   vertical-align: middle;
+  border-top: 0;
 }
 
-.table .flag-column {
-  width: 80px;
-
-  svg {
-    $size: 1.2rem;
-
-    width: $size;
-    height: $size;
-  }
+.table tbody tr:first-child td {
+  padding-top: 0;
 }

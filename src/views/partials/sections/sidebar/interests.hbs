@@ -1,0 +1,26 @@
+{{#if resume.interests.length}}
+    <section class="section-interests">
+        {{> components/title icon='beer' title='Interests'}}
+        <ul>
+            {{#each resume.interests}}
+            <li>
+                {{#if name}}
+                    <span class="li-title">{{name}}</span>
+                {{/if}}
+                {{#if level}}
+                    <span class="li-subtitle">
+                        {{level}}
+                    </span>
+                {{/if}}
+                {{#if keywords.length}}
+                    <div class="tag-list">
+                        {{#each keywords}}
+                            <span class="tag text-secondary">{{this}}</span>
+                        {{/each}}
+                    </div>
+                {{/if}}
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+{{/if}}

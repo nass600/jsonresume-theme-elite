@@ -14,28 +14,66 @@
     </div>
     <div class="page">
         <div class="sidebar">
-            {{> sections/basic }}
-            {{> sections/contact }}
-            {{> sections/skills-progress }}
+            {{> sections/sidebar/basic }}
+            {{> sections/sidebar/contact }}
+            {{> sections/sidebar/social }}
+            {{#if themeConfig.sidebarSkills}}
+                {{> sections/sidebar/skills }}
+            {{/if}}
+            {{#if themeConfig.sidebarLanguages}}
+                {{> sections/sidebar/languages }}
+            {{/if}}
+            {{#if themeConfig.sidebarAwards}}
+                {{> sections/sidebar/awards }}
+            {{/if}}
+            {{#if themeConfig.sidebarInterests}}
+                {{> sections/sidebar/interests }}
+            {{/if}}
+            {{#if themeConfig.sidebarPublications}}
+                {{> sections/sidebar/publications }}
+            {{/if}}
+            {{#if themeConfig.sidebarCertifications}}
+                {{> sections/sidebar/certifications }}
+            {{/if}}
+            {{#if themeConfig.sidebarReferences}}
+                {{> sections/sidebar/references }}
+            {{/if}}
+            {{#if themeConfig.sidebarVolunteer}}
+                {{> sections/sidebar/volunteer }}
+            {{/if}}
         </div>
         <div class="content">
-            <div class="watermark">
-                <span class="text-secondary">Generated with</span>
-                <svg>
-                    <use xlink:href="#nodejs"></use>
-                </svg>
-            </div>
-            {{> sections/summary }}
-            {{> sections/work }}
-            {{> sections/education }}
-            {{> sections/awards }}
-            {{> sections/publications }}
-            {{> sections/volunteer }}
-            {{> sections/skills }}
-            {{> sections/languages }}
-            {{> sections/interests }}
-            {{> sections/references }}
-            {{> sections/certifications }}
+            {{#if themeConfig.watermark}}
+                {{> sections/content/watermark }}
+            {{/if}}
+            {{> sections/content/summary }}
+            {{> sections/content/work }}
+            {{> sections/content/education }}
+
+            {{#unless themeConfig.sidebarAwards}}
+                {{> sections/content/awards }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarPublications}}
+                {{> sections/content/publications }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarVolunteer}}
+                {{> sections/content/volunteer }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarSkills}}
+                {{> sections/content/skills }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarLanguages}}
+                {{> sections/content/languages }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarInterests}}
+                {{> sections/content/interests }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarReferences}}
+                {{> sections/content/references }}
+            {{/unless}}
+            {{#unless themeConfig.sidebarCertifications}}
+                {{> sections/content/certifications }}
+            {{/unless}}
         </div>
     </div>
 

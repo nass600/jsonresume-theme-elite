@@ -2,7 +2,7 @@
     "basics": {
         "name": "Richard<br>Hendriks",
         "label": "Programmer",
-        "picture": "http://www.piedpiper.com/app/themes/pied-piper/dist/images/richard.png",
+        "picture": "https://vignette.wikia.nocookie.net/silicon-valley/images/3/33/Richard_Hendricks.jpg",
         "email": "richard.hendriks@piedpiper.com",
         "phone": "(912) 555-4321",
         "website": "http://piedpiper.com",
@@ -23,7 +23,7 @@
             {
                 "network": "Linkedin",
                 "username": "richardhendricks84",
-                "url": "https://www.linkedin.com/in/richardhendricks84/"
+                "url": "https://www.linkedin.com/in/richardhendricks84"
             },
             {
                 "network": "Vimeo",
@@ -43,7 +43,7 @@
             {
                 "network": "Instagram",
                 "username": "siliconhbo",
-                "url": "https://instagram.com/siliconhbo/"
+                "url": "https://instagram.com/siliconhbo"
             },
             {
                 "network": "Tumblr",
@@ -53,7 +53,7 @@
             {
                 "network": "Pinterest",
                 "username": "siliconhbo",
-                "url": "https://instagram.com/siliconhbo/"
+                "url": "https://pinterest.com/siliconhbo"
             },
             {
                 "network": "Dribbble",
@@ -186,15 +186,15 @@
     ],
     "languages": [
         {
-            "name": "gb",
-            "level": "Native speaker"
+            "name": "english",
+            "level": "Native"
         },
         {
-            "name": "de",
+            "name": "german",
             "level": "Basic"
         },
         {
-            "name": "es",
+            "name": "spanish",
             "level": "Intermediate"
         }
     ],

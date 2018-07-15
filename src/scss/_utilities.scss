@@ -2,18 +2,22 @@
 // ----------------------------------------------
 
 .text-primary {
-  fill: $color-primary;
-
   .sidebar & {
     color: $sidebar-primary !important;
+    fill: $sidebar-primary;
+
+    svg {
+      fill: $sidebar-primary;
+    }
   }
 
   .content & {
     color: $page-primary !important;
-  }
+    fill: $page-primary;
 
-  svg {
-    fill: $color-primary;
+    svg {
+      fill: $page-primary;
+    }
   }
 }
 
@@ -41,11 +45,16 @@
     height: $icon-width;
   }
 
-  div,
-  span,
-  a {
+  svg + div,
+  svg + span,
+  svg + a {
     flex: 1;
     line-height: $icon-width;
-    margin-left: $spacer;
+    margin-left: 6px;
   }
+}
+
+.hyphenate {
+  word-break: break-word;
+  hyphens: auto;
 }

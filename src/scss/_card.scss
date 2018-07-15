@@ -32,7 +32,7 @@
     margin-bottom: 0;
 
     & + .card-text {
-      margin-top: 8px;
+      margin-top: 6px;
     }
   }
 
@@ -42,6 +42,10 @@
 
   .card-text {
     text-align: justify;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
 
     ul li {
       padding-left: 1rem;
@@ -72,22 +76,14 @@
     left: 0;
   }
 
-
   .icon-item {
     svg {
       width: 10px;
       height: 1rem;
     }
-
-    div,
-    span,
-    a {
-      margin-left: 6px;
-    }
   }
 
   .card-link {
-
     span {
       color: inherit;
     }
@@ -102,20 +98,59 @@
     padding: 0;
     margin: 0;
   }
+}
 
-  .card-tags {
-    position: relative;
+.card .card-tags {
+  svg {
+    width: 10px;
+    height: 1rem;
+  }
+}
 
-    .tag {
-      margin-left: 0;
+.tag-list {
+  .tag {
+    margin-left: 0 !important;
 
-      &::after {
-        content: ",";
-      }
-
-      &:last-of-type::after {
-        content: '';
-      }
+    &::after {
+      content: ",";
     }
+
+    &:last-of-type::after {
+      content: '';
+    }
+  }
+}
+
+.sidebar .card {
+  padding: 0;
+
+  .card-header,
+  .card-block,
+  .card-footer, {
+    padding-left: 0;
+    padding-right: 0;
+
+    .card-title {
+      text-transform: none;
+    }
+  }
+
+  .card-footer {
+    margin-top: 6px;
+  }
+
+  .card-text {
+    text-align: left;
+    word-break: break-all;
+    hyphens: auto;
+  }
+
+  .card-block {
+    padding-top: $spacer/4;
+    padding-bottom: 0;
+  }
+
+  & + .card {
+    padding-top: $spacer;
   }
 }

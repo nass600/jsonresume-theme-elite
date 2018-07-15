@@ -1,0 +1,17 @@
+{
+    "avatar": true,
+    "sidebarSkills": true,
+    "sidebarLanguages": true,
+    "sidebarInterests": false,
+    "sidebarAwards": false,
+    "sidebarPublications": false,
+    "sidebarCertifications": false,
+    "sidebarReferences": false,
+    "sidebarVolunteer": false,
+    "workDuration": true,
+    "educationDuration": true,
+    "volunteerDuration": false,
+    "awardDateSince": false,
+    "certifcationDateSince": false,
+    "watermark": true
+}

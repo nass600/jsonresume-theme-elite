@@ -1,6 +1,9 @@
 // Sections
 // ----------------------------------------------
 
+// Section Summary
+// --------------------------------------------------------
+
 .section-summary {
   p {
     text-align: justify;
@@ -12,9 +15,27 @@
   }
 }
 
+// Section Skills
+// --------------------------------------------------------
+
 .content .section-skills {
-  .card + .card {
+  .card-block {
     padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  ul li {
+    .li-title {
+      font-weight: bold;
+    }
+
+    .li-title + .li-subtitle {
+      color: $color-secondary;
+    }
+
+    & + li {
+      margin-top: 0.25rem;
+    }
   }
 }
 
@@ -39,12 +60,14 @@
     @include clearfix;
 
     .name {
-      text-transform: uppercase;
       float: left;
       margin-bottom: 0;
     }
   }
 }
+
+// Section Basic
+// --------------------------------------------------------
 
 .section-basic {
   text-align: center;
@@ -73,18 +96,8 @@
   }
 }
 
-@if $enable-avatar == true {
-  .section-basic .avatar {
-    display: block;
-  }
-}
-
-@else {
-  .section-basic .avatar {
-    display: none;
-    visibility: hidden;
-  }
-}
+// Section Contact
+// --------------------------------------------------------
 
 .section-contact {
   $icon-width: 16px;
@@ -114,15 +127,94 @@
   }
 }
 
+// Section Education
+// --------------------------------------------------------
+
 .section-education .card-block {
   padding-bottom: 0;
 }
 
-.section-interests .card-block {
+// Section Interests
+// --------------------------------------------------------
+
+.content .section-interests .card-block {
   padding-top: 0;
+
+  .tag-list {
+    display: inline-block;
+  }
 }
+
+.sidebar .section-interests {
+
+  li + li {
+    margin-top: 0.5rem;
+  }
+
+  .tag-list {
+    margin-left: 0;
+  }
+}
+
+// Section References
+// --------------------------------------------------------
 
 .section-references .card-block {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+// Section Languages
+// --------------------------------------------------------
+
+.section-languages {
+  .card {
+    padding: 0;
+  }
+  
+  .table .column-name {
+    width: 1%;
+  }
+
+  .table .column-flag {
+    $size: 20px;
+
+    width: $size;
+    padding-left: 0;
+    
+    svg {
+      display: block;
+      max-height: 100%;
+
+      width: $size;
+      height: $size;
+    }
+  }
+
+  .table .column-level {
+    padding-right: 0;
+  }
+}
+
+.sidebar .section-languages {
+  $size: 16px;
+
+  .table .column-flag {
+    width: $size;
+
+    svg {
+      width: $size;
+      height: $size;
+    }
+  } 
+}
+
+
+// Section Publications
+// --------------------------------------------------------
+
+.sidebar .section-publications {
+  .card-link {
+    word-wrap: break-word; 
+  }
 }

@@ -18,6 +18,10 @@ body {
     color: $sidebar-color;
     flex: 0 0 $sidebar-width;
     width: $sidebar-width;
+
+    a {
+      color: $sidebar-color;
+    }
   }
 
   .content {
@@ -68,12 +72,16 @@ body {
     font-size: 0.9rem;
     line-height: 0.9rem;
     text-align: center;
+    justify-content: center;
 
     .title-icon {
       background-color: transparent;
       padding: 0;
-      width: auto;
       height: auto;
+      width: 1rem;
+      flex-basis: 1rem;
+      margin-right: 0.5rem;
+      justify-content: center;
       display: none;
     }
 
@@ -108,7 +116,6 @@ body {
 
   span {
     margin-left: 0.25rem;
-    flex: 1;
     line-height: 1;
   }
 
@@ -127,27 +134,5 @@ body {
       align-self: center;
       height: $h2-font-size;
     }
-  }
-}
-
-@if $enable-skills-sidebar == true {
-  .sidebar .section-skills {
-    display: block;
-  }
-
-  .content .section-skills {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@else {
-  .sidebar .section-skills {
-    display: none;
-    visibility: hidden;
-  }
-
-  .content .section-skills {
-    display: block;
   }
 }

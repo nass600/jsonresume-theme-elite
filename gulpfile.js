@@ -1,9 +1,9 @@
 import gulp from 'gulp'
 import requireDir from 'require-dir'
 import del from 'del'
-import config from './config'
+import config from './build/config'
 
-requireDir('./gulp/', {recurse: true})
+requireDir('./build/', {recurse: true})
 
 /**
  * Clean previously generated files

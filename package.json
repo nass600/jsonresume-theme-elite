@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-elite",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "Elite theme for JSONResume",
   "main": "index.js",
   "scripts": {

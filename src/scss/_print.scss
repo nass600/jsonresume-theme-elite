@@ -14,7 +14,8 @@
   .section-summary,
   .section-languages,
   .card,
-  .sidebar .section-skills,
+  .sidebar [class^="section-"],
+  section .title,
   p {
     page-break-inside: avoid;
   }

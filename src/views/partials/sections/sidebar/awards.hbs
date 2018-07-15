@@ -1,0 +1,34 @@
+{{#if resume.awards.length}}
+    <section class="section-awards">
+        {{> components/title icon='medal' title='Awards'}}
+        {{#each resume.awards}}
+            <div class="card">
+                {{#if date}}
+                    <div class="card-header">
+                        <span class="card-text card-dates">
+                            <span class="date-range">
+                                {{formatDate date}}
+                            </span>
+                            {{#if ../themeConfig.awardDateSince}}
+                                <span class="duration">
+                                    ({{dateAgo date}})
+                                </span>
+                            {{/if}}
+                        </span>
+                    </div>
+                {{/if}}
+
+                {{#if title}}
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            {{title}}
+                            {{#if awarder}}
+                                <span class="card-subtitle">{{awarder}}</span>
+                            {{/if}}
+                        </h4>
+                    </div>
+                {{/if}}
+            </div>
+        {{/each}}
+    </section>
+{{/if}}

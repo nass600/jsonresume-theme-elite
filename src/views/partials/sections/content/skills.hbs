@@ -1,0 +1,35 @@
+{{#if resume.skills.length}}
+    <section class="section-skills">
+        {{> components/title icon='skills' title='Skills'}}
+        <div class="card">
+            <div class="card-block">
+                <div class="card-text">
+                    <ul>
+                        {{#each resume.skills}}
+                        <li>
+                            {{#if name}}
+                                <span class="li-title">{{name}}</span>
+                            {{/if}}
+                            {{#if level}}
+                                <span class="li-subtitle">
+                                    {{level}}
+                                </span>
+                            {{/if}}
+
+                            {{#if keywords.length}}
+                            <div class="card-tags icon-item" href="{{website}}">
+                                <div class="tag-list">
+                                    {{#each keywords}}
+                                        <span class="tag text-secondary">{{this}}</span>
+                                    {{/each}}
+                                </div>
+                            </div>
+                            {{/if}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{{/if}}

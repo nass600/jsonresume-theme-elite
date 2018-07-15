@@ -1,0 +1,35 @@
+{{#if resume.certifications.length}}
+    <section class="section-certifications">
+        {{> components/title icon='certification' title='Certifications'}}
+
+        {{#each resume.certifications}}
+            <div class="card">
+                {{#if date}}
+                    <div class="card-header">
+                        <span class="card-text card-dates">
+                            <span class="date-range">
+                                {{formatDate date}}
+                            </span>
+                            {{#if ../themeConfig.certificationDateSince}}
+                                <span class="duration">
+                                    ({{dateAgo date}})
+                                </span>
+                            {{/if}}
+                        </span>
+                    </div>
+                {{/if}}
+
+                {{#if title}}
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            {{title}}
+                            {{#if awarder}}
+                                <span class="card-subtitle">{{awarder}}</span>
+                            {{/if}}
+                        </h4>
+                    </div>
+                {{/if}}
+            </div>
+        {{/each}}
+    </section>
+{{/if}}
