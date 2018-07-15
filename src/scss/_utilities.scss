@@ -45,12 +45,12 @@
     height: $icon-width;
   }
 
-  div,
-  span,
-  a {
+  svg + div,
+  svg + span,
+  svg + a {
     flex: 1;
     line-height: $icon-width;
-    margin-left: $spacer;
+    margin-left: 6px;
   }
 }
 

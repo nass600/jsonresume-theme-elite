@@ -6,6 +6,7 @@ const exec = require('child_process').exec
 const packageJson = require('../../package.json')
 const config = require('../config.js')
 const elite = require('../..')
+const path = require('path')
 
 /**
  * Link npm library itself
@@ -38,7 +39,11 @@ gulp.task('export', ['build', 'link'], function (cb) {
   let pageFormat = args.pageFormat || 'Letter'
 
   if (format === 'pdf' && pageFormat) {
-    elite.exportPdf(config.names.resume.data, pageFormat)
+    elite.exportPdf(
+      path.resolve(config.names.resume.data),
+      path.resolve(config.names.resume.pdf),
+      pageFormat
+    )
   } else {
     let command = `resume export ${config.names.resume.dest} --format ${format}`
 

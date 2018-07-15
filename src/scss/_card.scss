@@ -76,22 +76,14 @@
     left: 0;
   }
 
-
   .icon-item {
     svg {
       width: 10px;
       height: 1rem;
     }
-
-    div,
-    span,
-    a {
-      margin-left: 6px;
-    }
   }
 
   .card-link {
-
     span {
       color: inherit;
     }
@@ -116,15 +108,13 @@
 }
 
 .tag-list {
-  margin-left: 6px;
-
   .tag {
     margin-left: 0 !important;
-  
+
     &::after {
       content: ",";
     }
-  
+
     &:last-of-type::after {
       content: '';
     }
@@ -141,8 +131,12 @@
     padding-right: 0;
 
     .card-title {
-      text-transform: none; 
+      text-transform: none;
     }
+  }
+
+  .card-footer {
+    margin-top: 6px;
   }
 
   .card-text {

@@ -6,11 +6,11 @@
 
 Elite theme for [JSONResume](https://jsonresume.org/)
 
-![](docs/img/elite.jpg)
+![](docs/img/elite.png)
 
 ## TOC
 
-1. [Installation](#installtion)
+1. [Installation](#installation)
 2. [Preview](#preview)
 3. [Generating your resume in PDF](#generating-your-resume-in-pdf)
 4. [Resume data](docs/RESUME_DATA.md)

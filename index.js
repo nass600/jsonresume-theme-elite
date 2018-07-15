@@ -27,12 +27,12 @@ function render (resume, pageFormat) {
   })
 }
 
-function exportPdf (resumeFile, pageFormat) {
-  let resume = require(path.join(__dirname, resumeFile))
+function exportPdf (dataFile, pdfFile, pageFormat) {
+  let resume = require(dataFile)
   const pdf = require('html-pdf')
   const template = render(resume, pageFormat)
 
-  pdf.create(template, {format: pageFormat}).toFile(config.names.resume.pdf, function (err, res) {
+  pdf.create(template, {format: pageFormat}).toFile(pdfFile, function (err, res) {
     if (err) return console.log(err)
   })
 }
