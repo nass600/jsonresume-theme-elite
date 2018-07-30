@@ -6,20 +6,20 @@ const Swag = require('swag')
 const pluralize = require('pluralize')
 const moment = require('moment')
 const config = require('./build/config')
-const themeConfig = require('./theme-config')
+const defaultThemeConfig = require('./theme-config')
 
 Swag.registerHelpers(handlebars)
 handlebars.registerHelper({
   formatDate: function (date) {
-    if (typeof date === 'undefined') {
+    if (!date) {
       return 'now'
     }
     return moment(date).format('MMM YYYY')
   },
   dateDiff: function (startDate, endDate) {
     let text = ''
-    startDate = moment(startDate)
-    endDate = moment(endDate)
+    startDate = startDate ? moment(startDate) : moment()
+    endDate = endDate ? moment(endDate) : moment()
     let years = endDate.diff(startDate, 'years')
     startDate.add(years, 'years')
     let months = endDate.diff(startDate, 'months')
@@ -57,7 +57,7 @@ handlebars.registerHelper({
   }
 })
 
-function render (resume, pageFormat) {
+function render (resume, pageFormat, themeConfig) {
   let css = fs.readFileSync(path.join(__dirname, config.paths.styles.entry), 'utf-8')
   let icons = fs.readFileSync(path.join(__dirname, config.paths.images.dest, 'images.svg'), 'utf-8')
   let resumeTemplate = fs.readFileSync(path.join(__dirname, config.paths.views.entry), 'utf-8')
@@ -66,7 +66,7 @@ function render (resume, pageFormat) {
   Handlebars.partials(path.join(__dirname, config.paths.views.partials))
 
   return Handlebars.compile(resumeTemplate)({
-    themeConfig,
+    themeConfig: Object.assign(defaultThemeConfig, themeConfig),
     icons,
     css,
     resume,
@@ -74,10 +74,10 @@ function render (resume, pageFormat) {
   })
 }
 
-function exportPdf (dataFile, pdfFile, pageFormat) {
+function exportPdf (dataFile, pdfFile, pageFormat, themeConfig) {
   let resume = require(dataFile)
   const pdf = require('html-pdf')
-  const template = render(resume, pageFormat)
+  const template = render(resume, pageFormat, themeConfig)
 
   pdf.create(template, {format: pageFormat}).toFile(pdfFile, function (err, res) {
     if (err) return console.log(err)
