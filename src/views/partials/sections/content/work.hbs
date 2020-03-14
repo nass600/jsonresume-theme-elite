@@ -3,6 +3,11 @@
         {{> components/title icon='briefcase' title='Experience'}}
         {{#each resume.work}}
             <div class="card">
+                {{#if logo}}
+                    <div class="card-image">
+                        <img src="{{logo}}" alt="">
+                    </div>
+                {{/if}}
                 {{#if startDate}}
                     <div class="card-header">
                         <span class="card-text card-dates">

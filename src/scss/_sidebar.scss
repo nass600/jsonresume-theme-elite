@@ -1,0 +1,189 @@
+// Sidebar
+// ----------------------------------------------
+
+.sidebar {
+    .icon-item {
+      font-size: $small-font-size;
+    }
+  
+    [class^="section-"] {
+      padding: $spacer;
+    }
+  
+    [class^="section-"] .title {
+      padding: 0 0 $spacer;
+      font-size: $h2-font-size;
+      line-height: $h2-font-size;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+  
+      .title-icon {
+        background-color: transparent;
+        padding: 0;
+        height: auto;
+        width: 1rem;
+        flex-basis: 1rem;
+        margin-right: 0.5rem;
+        justify-content: center;
+      }
+  
+      span {
+        margin: 0;
+        color: $sidebar-color !important;
+      }
+    }
+  
+    .progress-dots .dot {
+      border-color: $sidebar-secondary;
+  
+      &.active {
+        background-color: $sidebar-primary;
+        border-color: $sidebar-primary;
+      }
+    }
+  }
+  
+  [class^="section-"] {
+    width: 100%;
+  }
+  
+  [class^="section-"] .title {
+    $icon-bg-size: 28px;
+  
+    text-transform: uppercase;
+    padding: $spacer $padding-x 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  
+    span {
+      margin-left: 0.25rem;
+      line-height: 1;
+    }
+  
+    .title-icon {
+      background-color: darken($page-bg, 4%);
+      border-radius: 50%;
+      width: $icon-bg-size;
+      height: $icon-bg-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: $icon-bg-size;
+  
+      svg {
+        flex: 1;
+        align-self: center;
+        height: $h2-font-size;
+      }
+    }
+  }
+  
+
+.sidebar .card {
+    padding: 0;
+  
+    .card-header,
+    .card-block,
+    .card-footer, {
+      padding-left: 0;
+      padding-right: 0;
+  
+      .card-title {
+        text-transform: none;
+      }
+    }
+  
+    .card-footer {
+      margin-top: 6px;
+    }
+  
+    .card-text {
+      text-align: left;
+      word-break: break-all;
+      hyphens: auto;
+    }
+  
+    .card-block {
+      padding-top: $spacer/4;
+      padding-bottom: 0;
+    }
+  
+    & + .card {
+      padding-top: $spacer;
+    }
+}
+
+
+// Section Skills
+// --------------------------------------------------------
+
+.sidebar .section-skills {
+    table {
+      width: 100%;
+  
+      tr + tr td {
+        padding-top: 0.5rem;
+      }
+  
+      td {
+        vertical-align: top;
+      }
+  
+      .cell-progress {
+        width: 68px;
+      }
+    }
+  
+    .skill {
+      @include clearfix;
+  
+      .name {
+        float: left;
+        margin-bottom: 0;
+      }
+    }
+}
+
+
+// Section Interests
+// --------------------------------------------------------
+
+.sidebar .section-interests {
+
+    li + li {
+      margin-top: 0.5rem;
+    }
+  
+    .tag-list {
+      margin-left: 0;
+    }
+}
+
+  
+// Section Languages
+// --------------------------------------------------------
+
+.sidebar .section-languages {
+    $size: 16px;
+  
+    .table .column-flag {
+      width: $size;
+  
+      svg {
+        width: $size;
+        height: $size;
+      }
+    } 
+  }
+  
+  
+  // Section Publications
+  // --------------------------------------------------------
+  
+  .sidebar .section-publications {
+    .card-link {
+      word-wrap: break-word; 
+    }
+  }

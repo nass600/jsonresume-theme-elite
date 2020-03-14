@@ -31,30 +31,21 @@
   }
 }
 
-.img-lang {
-  max-width: 2rem;
-  height: auto;
-}
-
 .icon-item {
-  $icon-width: 16px;
   display: flex;
+  align-items: center;
 
   svg {
-    width: $icon-width;
-    height: $icon-width;
+    width: $icon-size;
+    height: $icon-size;
   }
 
   svg + div,
   svg + span,
   svg + a {
     flex: 1;
-    line-height: $icon-width;
     margin-left: 6px;
+    word-wrap: break-word;
+    min-width: 0;
   }
-}
-
-.hyphenate {
-  word-break: break-word;
-  hyphens: auto;
 }

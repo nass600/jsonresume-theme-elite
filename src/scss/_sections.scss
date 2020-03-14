@@ -5,6 +5,10 @@
 // --------------------------------------------------------
 
 .section-summary {
+  .p-3 {
+    padding-left: $padding-x !important;
+    padding-right: $padding-x !important;
+  }
   p {
     text-align: justify;
     margin-bottom: 0;
@@ -35,33 +39,6 @@
 
     & + li {
       margin-top: 0.25rem;
-    }
-  }
-}
-
-.sidebar .section-skills {
-  table {
-    width: 100%;
-
-    tr + tr td {
-      padding-top: 0.5rem;
-    }
-
-    td {
-      vertical-align: top;
-    }
-
-    .cell-progress {
-      width: 68px;
-    }
-  }
-
-  .skill {
-    @include clearfix;
-
-    .name {
-      float: left;
-      margin-bottom: 0;
     }
   }
 }
@@ -100,38 +77,13 @@
 // --------------------------------------------------------
 
 .section-contact {
-  $icon-width: 16px;
-
   ul + ul {
     margin-top: 2rem;
-  }
-
-  li {
-    font-size: 0.65rem;
-
-    span,
-    a {
-      word-wrap: break-word;
-      min-width: 0;
-      margin-left: 10px;
-    }
-
-    svg {
-      height: 15px;
-      margin-top: 1px;
-    }
   }
 
   li + li {
     margin-top: 0.5rem;
   }
-}
-
-// Section Education
-// --------------------------------------------------------
-
-.section-education .card-block {
-  padding-bottom: 0;
 }
 
 // Section Interests
@@ -143,25 +95,6 @@
   .tag-list {
     display: inline-block;
   }
-}
-
-.sidebar .section-interests {
-
-  li + li {
-    margin-top: 0.5rem;
-  }
-
-  .tag-list {
-    margin-left: 0;
-  }
-}
-
-// Section References
-// --------------------------------------------------------
-
-.section-references .card-block {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 // Section Languages
@@ -193,28 +126,5 @@
 
   .table .column-level {
     padding-right: 0;
-  }
-}
-
-.sidebar .section-languages {
-  $size: 16px;
-
-  .table .column-flag {
-    width: $size;
-
-    svg {
-      width: $size;
-      height: $size;
-    }
-  } 
-}
-
-
-// Section Publications
-// --------------------------------------------------------
-
-.sidebar .section-publications {
-  .card-link {
-    word-wrap: break-word; 
   }
 }

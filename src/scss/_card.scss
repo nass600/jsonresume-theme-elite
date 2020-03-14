@@ -6,17 +6,15 @@
 }
 
 .card-header {
-  padding: 0 $spacer 0;
-  font-size: $font-size-h5;
+  padding: 0 $padding-x;
+  font-size: $small-font-size;
   line-height: 1;
+  color: $page-secondary;
+  display: flex;
+  align-items: center;
 
-  .card-dates {
-    color: $page-secondary;
-    display: inline-block;
-  }
-
-  span {
-    vertical-align: middle;
+  & + .card-block {
+    padding-top: $spacer/2;
   }
 
   .badge {
@@ -24,8 +22,27 @@
   }
 }
 
+.card-image {
+  width: $card-image-size;
+  height: $card-image-size;
+  border-radius: 50%;
+  background-color: darken($page-bg, 4%);
+  overflow: hidden;
+  position: absolute;
+  left: -($card-image-size/2);
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .card-block {
-  padding: $spacer/2 $spacer;
+  padding: 0 $padding-x;
+
+  & + .card-footer {
+    padding-top: $spacer/2;
+  }
 
   .card-title {
     text-transform: uppercase;
@@ -68,19 +85,12 @@
 }
 
 .card-footer {
-  padding: 0 $spacer 0;
+  padding: 0 $padding-x;
 
   i {
     position: absolute;
     top: 0;
     left: 0;
-  }
-
-  .icon-item {
-    svg {
-      width: 10px;
-      height: 1rem;
-    }
   }
 
   .card-link {
@@ -100,13 +110,6 @@
   }
 }
 
-.card .card-tags {
-  svg {
-    width: 10px;
-    height: 1rem;
-  }
-}
-
 .tag-list {
   .tag {
     margin-left: 0 !important;
@@ -118,39 +121,5 @@
     &:last-of-type::after {
       content: '';
     }
-  }
-}
-
-.sidebar .card {
-  padding: 0;
-
-  .card-header,
-  .card-block,
-  .card-footer, {
-    padding-left: 0;
-    padding-right: 0;
-
-    .card-title {
-      text-transform: none;
-    }
-  }
-
-  .card-footer {
-    margin-top: 6px;
-  }
-
-  .card-text {
-    text-align: left;
-    word-break: break-all;
-    hyphens: auto;
-  }
-
-  .card-block {
-    padding-top: $spacer/4;
-    padding-bottom: 0;
-  }
-
-  & + .card {
-    padding-top: $spacer;
   }
 }
