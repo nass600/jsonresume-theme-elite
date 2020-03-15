@@ -42,6 +42,7 @@
   svg {
     width: $icon-size;
     height: $icon-size;
+    align-self: flex-start;
   }
 
   svg + div,

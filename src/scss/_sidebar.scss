@@ -2,58 +2,98 @@
 // ----------------------------------------------
 
 .sidebar {
-    .icon-item {
-      font-size: $small-font-size;
+  font-size: $small-font-size;
+
+  h2 {
+    font-size: $h3-font-size;
+  }
+
+  h3 {
+    font-size: $h5-font-size;
+  }
+
+  .section-basic {
+    padding: $spacer $sidebar-padding-x;
+  }
+
+  [class^="section-"] .title {
+    padding: $spacer $sidebar-padding-x 0;
+    justify-content: center;
+
+    .title-icon {
+      background-color: transparent;
+      padding: 0;
+      height: auto;
+      width: 1rem;
+      flex-basis: 1rem;
+      margin-right: $spacer/3;
+      justify-content: center;
     }
 
-    .section-basic {
-      padding: $spacer;
+    span {
+      margin: 0;
+      color: $sidebar-color !important;
     }
-  
-    [class^="section-"] .title {
-      justify-content: center;
-  
-      .title-icon {
-        background-color: transparent;
-        padding: 0;
-        height: auto;
-        width: 1rem;
-        flex-basis: 1rem;
-        margin-right: 0.5rem;
-        justify-content: center;
-      }
-  
-      span {
-        margin: 0;
-        color: $sidebar-color !important;
-      }
+  }
+
+  .progress-dots .dot {
+    border-color: $sidebar-secondary;
+
+    &.active {
+      background-color: $sidebar-primary;
+      border-color: $sidebar-primary;
     }
-  
-    .progress-dots .dot {
-      border-color: $sidebar-secondary;
-  
-      &.active {
-        background-color: $sidebar-primary;
-        border-color: $sidebar-primary;
-      }
+  }
+
+  .column-flag {
+    svg {
+      width: 0.9rem;
+      height: 0.7rem;
     }
+  }
 }
   
 
 .sidebar .card {
-    .card-title {
-      text-transform: none;
-    }
+  padding: $spacer $sidebar-padding-x;
+
+  .card-aside {
+    display: none;
+  }
+
+  .card-block {
+    margin-left: 0;
+  }
+
+  .card-title {
+    text-transform: none;
+  }
   
-    .card-body {
-      text-align: left;
-      word-break: break-all;
-      hyphens: auto;
+  .card-body {
+    text-align: left;
+    word-break: break-all;
+    hyphens: auto;
+  }
+
+  .card-link {
+    word-wrap: break-word;
+
+    svg {
+      display: none;
     }
-  
-    & + .card {
-      padding-top: 0;
+
+    span {
+      margin-left: 0;
     }
+  }
+
+  .card-highlights {
+    display: none;
+  }
+
+  & + .card {
+    padding-top: 0;
+  }
 }
 
 
@@ -104,13 +144,20 @@
       margin-left: 0;
     }
 }
+
   
-  
-// Section Publications
+// Section
 // --------------------------------------------------------
 
-.sidebar .section-publications {
-  .card-link {
-    word-wrap: break-word; 
+.sidebar {
+  .section-awards,
+  .section-publications,
+  .section-references,
+  .section-volunteer,
+  .section-certifications {
+    .card-body {
+      display: none;
+    }
   }
 }
+
