@@ -53,7 +53,7 @@
   .avatar {
     border-radius: 50%;
     overflow: hidden;
-    margin: 1rem auto;
+    margin: 0 auto 1rem;
     width: $avatar-size;
     height: $avatar-size;
     background-color: darken($sidebar-bg, 5%);
@@ -66,10 +66,6 @@
 
   .name {
     margin: 1rem auto;
-  }
-
-  .subtitle {
-    margin-bottom: 1rem;
   }
 }
 
@@ -101,30 +97,19 @@
 // --------------------------------------------------------
 
 .section-languages {
-  .card {
-    padding: 0;
-  }
-  
-  .table .column-name {
+  .column-name {
     width: 1%;
   }
 
-  .table .column-flag {
-    $size: 20px;
-
-    width: $size;
-    padding-left: 0;
+  .column-flag {
+    width: $flag-size;
     
     svg {
       display: block;
       max-height: 100%;
 
-      width: $size;
-      height: $size;
+      width: $flag-size;
+      height: $flag-size;
     }
-  }
-
-  .table .column-level {
-    padding-right: 0;
   }
 }

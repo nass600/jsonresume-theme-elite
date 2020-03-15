@@ -5,18 +5,13 @@
     .icon-item {
       font-size: $small-font-size;
     }
-  
-    [class^="section-"] {
+
+    .section-basic {
       padding: $spacer;
     }
   
     [class^="section-"] .title {
-      padding: 0 0 $spacer;
-      font-size: $h2-font-size;
-      line-height: $h2-font-size;
-      text-align: center;
       justify-content: center;
-      align-items: center;
   
       .title-icon {
         background-color: transparent;
@@ -42,76 +37,22 @@
         border-color: $sidebar-primary;
       }
     }
-  }
-  
-  [class^="section-"] {
-    width: 100%;
-  }
-  
-  [class^="section-"] .title {
-    $icon-bg-size: 28px;
-  
-    text-transform: uppercase;
-    padding: $spacer $padding-x 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-  
-    span {
-      margin-left: 0.25rem;
-      line-height: 1;
-    }
-  
-    .title-icon {
-      background-color: darken($page-bg, 4%);
-      border-radius: 50%;
-      width: $icon-bg-size;
-      height: $icon-bg-size;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-basis: $icon-bg-size;
-  
-      svg {
-        flex: 1;
-        align-self: center;
-        height: $h2-font-size;
-      }
-    }
-  }
+}
   
 
 .sidebar .card {
-    padding: 0;
-  
-    .card-header,
-    .card-block,
-    .card-footer, {
-      padding-left: 0;
-      padding-right: 0;
-  
-      .card-title {
-        text-transform: none;
-      }
+    .card-title {
+      text-transform: none;
     }
   
-    .card-footer {
-      margin-top: 6px;
-    }
-  
-    .card-text {
+    .card-body {
       text-align: left;
       word-break: break-all;
       hyphens: auto;
     }
   
-    .card-block {
-      padding-top: $spacer/4;
-      padding-bottom: 0;
-    }
-  
     & + .card {
-      padding-top: $spacer;
+      padding-top: 0;
     }
 }
 
@@ -120,11 +61,11 @@
 // --------------------------------------------------------
 
 .sidebar .section-skills {
-    table {
+    .card-table {
       width: 100%;
-  
-      tr + tr td {
-        padding-top: 0.5rem;
+
+      td + td {
+        padding-left: 0;
       }
   
       td {
@@ -151,39 +92,25 @@
 // --------------------------------------------------------
 
 .sidebar .section-interests {
+    ul li {
+      color: $sidebar-color;
+    }
 
     li + li {
-      margin-top: 0.5rem;
+      margin-top: $spacer/2;
     }
   
     .tag-list {
       margin-left: 0;
     }
 }
-
   
-// Section Languages
+  
+// Section Publications
 // --------------------------------------------------------
 
-.sidebar .section-languages {
-    $size: 16px;
-  
-    .table .column-flag {
-      width: $size;
-  
-      svg {
-        width: $size;
-        height: $size;
-      }
-    } 
+.sidebar .section-publications {
+  .card-link {
+    word-wrap: break-word; 
   }
-  
-  
-  // Section Publications
-  // --------------------------------------------------------
-  
-  .sidebar .section-publications {
-    .card-link {
-      word-wrap: break-word; 
-    }
-  }
+}

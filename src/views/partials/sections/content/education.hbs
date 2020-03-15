@@ -4,43 +4,52 @@
 
         {{#each resume.education}}
             <div class="card">
-                {{#if startDate}}
-                    <div class="card-header">
-                        <span class="card-text card-dates">
-                            <span class="date-range">
-                                {{formatDate startDate}} - {{formatDate endDate}}
-                            </span>
-                            {{#if ../themeConfig.educationDuration}}
-                                <span class="duration">
-                                    ({{dateDiff startDate endDate}})
-                                </span>
-                            {{/if}}
-                        </span>
-                        {{#unless endDate}}
-                            <span class="badge badge-success">current</span>
-                        {{/unless}}
+                {{#if logo}}
+                    <div class="card-aside">
+                        <div class="card-image">
+                            <img src="{{logo}}" alt="{{institution}}">
+                        </div>
                     </div>
                 {{/if}}
-
-                {{#if studyType}}
-                    <div class="card-block">
-                        <h3 class="card-title">
-                            {{studyType}} {{area}}
-                            {{#if institution}}
-                                <span class="card-subtitle">{{institution}}</span>
-                            {{/if}}
-                        </h3>
-                        {{#if courses.length}}
-                            <div class="card-text">
-                                <ul>
-                                    {{#each courses}}
-                                        <li>{{this}}</li>
-                                    {{/each}}
-                                </ul>
+                <div class="card-block">
+                    <div class="card-header">
+                        {{#if studyType}}
+                            <h3 class="card-title">
+                                {{studyType}} {{area}}
+                                {{#if institution}}
+                                    <span class="card-subtitle">{{institution}}</span>
+                                {{/if}}
+                            </h3>
+                        {{/if}}
+                        {{#if startDate}}
+                            <div class="card-caption">
+                                <span class="card-text card-dates">
+                                    <span class="date-range">
+                                        {{formatDate startDate}} - {{formatDate endDate}}
+                                    </span>
+                                    {{#if ../themeConfig.educationDuration}}
+                                        <span class="duration">
+                                            ({{dateDiff startDate endDate}})
+                                        </span>
+                                    {{/if}}
+                                </span>
+                                {{#unless endDate}}
+                                    <span class="badge badge-success">current</span>
+                                {{/unless}}
                             </div>
                         {{/if}}
                     </div>
-                {{/if}}
+
+                    {{#if courses.length}}
+                        <div class="card-body">
+                            <ul>
+                                {{#each courses}}
+                                    <li>{{this}}</li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    {{/if}}
+                </div>
             </div>
         {{/each}}
     </section>

@@ -4,34 +4,42 @@
 
         {{#each resume.awards}}
             <div class="card">
-                {{#if date}}
-                    <div class="card-header">
-                        <span class="card-text card-dates">
-                            <span class="date-range">
-                                {{formatDate date}}
-                            </span>
-                            {{#if ../themeConfig.awardDateSince}}
-                                <span class="duration">
-                                    ({{dateAgo date}})
-                                </span>
-                            {{/if}}
-                        </span>
+                {{#if logo}}
+                    <div class="card-aside">
+                        <div class="card-image">
+                            <img src="{{logo}}" alt="{{awarder}}">
+                        </div>
                     </div>
                 {{/if}}
-
-                {{#if title}}
-                    <div class="card-block">
-                        <h3 class="card-title">
-                            {{title}}
-                            {{#if awarder}}
-                                <span class="card-subtitle">{{awarder}}</span>
-                            {{/if}}
-                        </h3>
-                        {{#if summary}}
-                            <div class="card-text">{{{summary}}}</div>
+                <div class="card-block">
+                    <div class="card-header">
+                        {{#if title}}
+                            <h3 class="card-title">
+                                {{title}}
+                                {{#if awarder}}
+                                    <span class="card-subtitle">{{awarder}}</span>
+                                {{/if}}
+                            </h3>
+                        {{/if}}
+                        {{#if date}}
+                            <div class="card-caption">
+                                <span class="card-text card-dates">
+                                    <span class="date-range">
+                                        {{formatDate date}}
+                                    </span>
+                                    {{#if ../themeConfig.awardDateSince}}
+                                        <span class="duration">
+                                            ({{dateAgo date}})
+                                        </span>
+                                    {{/if}}
+                                </span>
+                            </div>
                         {{/if}}
                     </div>
-                {{/if}}
+                    {{#if summary}}
+                        <div class="card-body">{{{summary}}}</div>
+                    {{/if}}
+                </div>
             </div>
         {{/each}}
     </section>

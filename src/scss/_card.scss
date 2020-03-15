@@ -2,23 +2,35 @@
 // ----------------------------------------------
 
 .card {
-  padding: $spacer 0;
+  padding: $spacer;
+  display: flex;
+  flex-direction: row;
 }
 
-.card-header {
-  padding: 0 $padding-x;
+.card-title {
+  text-transform: uppercase;
+  margin-bottom: 0;
+
+  & + .card-caption {
+    margin-top: $spacer/4;
+  }
+
+  .card-subtitle {
+    color: $page-secondary;
+  }
+}
+
+.card-caption {
   font-size: $small-font-size;
   line-height: 1;
   color: $page-secondary;
   display: flex;
   align-items: center;
+}
 
+.card-aside {
   & + .card-block {
-    padding-top: $spacer/2;
-  }
-
-  .badge {
-    margin-left: 0.25rem;
+    margin-left: $spacer/2;
   }
 }
 
@@ -28,8 +40,6 @@
   border-radius: 50%;
   background-color: darken($page-bg, 4%);
   overflow: hidden;
-  position: absolute;
-  left: -($card-image-size/2);
 
   img {
     max-width: 100%;
@@ -38,37 +48,36 @@
 }
 
 .card-block {
-  padding: 0 $padding-x;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-  & + .card-footer {
+  > div + div {
     padding-top: $spacer/2;
   }
+}
 
-  .card-title {
-    text-transform: uppercase;
-    margin-bottom: 0;
+.card-header {
+  .badge {
+    margin-left: 0.25rem;
+  }
+}
 
-    & + .card-text {
-      margin-top: 6px;
-    }
+.card-body {
+  text-align: justify;
+
+  p {
+    margin-bottom: 0.5rem;
   }
 
-  .card-subtitle {
-    color: $page-secondary;
-  }
-
-  .card-text {
+  ul li {
     text-align: justify;
+    position: relative;
+  }
 
-    p {
-      margin-bottom: 0.5rem;
-    }
-
+  .content & {
     ul li {
       padding-left: 1rem;
-      text-align: justify;
-      color: $page-color;
-      position: relative;
 
       &::before {
         position: absolute;
@@ -85,8 +94,6 @@
 }
 
 .card-footer {
-  padding: 0 $padding-x;
-
   i {
     position: absolute;
     top: 0;
@@ -121,5 +128,22 @@
     &:last-of-type::after {
       content: '';
     }
+  }
+}
+
+.card-table {
+  word-break: initial;
+  hyphens: initial;
+
+  td {
+    padding: 0;
+
+    + td {
+      padding-left: $spacer/2;
+    }
+  }
+
+  tr + tr td {
+    padding-top: $spacer/2;
   }
 }

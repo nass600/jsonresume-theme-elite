@@ -90,6 +90,7 @@
     "work": [
         {
             "company": "Pied Piper",
+            "logo": "https://ih0.redbubble.net/image.538431154.1686/ap,550x550,12x12,1,transparent,t.u2.png",
             "position": "CEO/President",
             "website": "http://piedpiper.com",
             "startDate": "2014-04-13",
@@ -108,6 +109,7 @@
         },
         {
             "company": "Hooli",
+            "logo": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/022018/hooli.jpg?g0WbCOl20sZupevIewoHqF5g3uC9ZNCP&itok=09Zgymrh",
             "position": "Software Engineer",
             "website": "http://www.hooli.xyz/",
             "startDate": "2013-01-01",
@@ -123,6 +125,7 @@
     "volunteer": [
         {
             "organization": "CoderDojo",
+            "logo": "https://pbs.twimg.com/profile_images/378800000426619448/ad669ea2b28bfbb7087958e0f398c97e_400x400.png",
             "position": "Teacher",
             "website": "http://coderdojo.com/",
             "startDate": "2012-01-01",
@@ -137,6 +140,7 @@
     "education": [
         {
             "institution": "Stanford",
+            "logo": "https://identity.stanford.edu/img/SU_SealColor_web9.png",
             "area": "Computer Science",
             "studyType": "B.S",
             "startDate": "2011-06-01",
@@ -150,6 +154,14 @@
     "awards": [
         {
             "title": "Digital Compression Pioneer Award",
+            "logo": "https://logosave.com/images/large/common/02/techcrunch.png",
+            "date": "2014-11-01",
+            "awarder": "Techcrunch",
+            "summary": "There is no spoon."
+        },
+        {
+            "title": "Digital Compression Pioneer Award",
+            "logo": "https://logosave.com/images/large/common/02/techcrunch.png",
             "date": "2014-11-01",
             "awarder": "Techcrunch",
             "summary": "There is no spoon."
@@ -205,12 +217,29 @@
                 "Ferrets",
                 "Unicorns"
             ]
+        },
+        {
+            "name": "Tech",
+            "keywords": [
+                "Tabs"
+            ]
         }
     ],
     "references": [
         {
             "name": "Erlich Bachman",
+            "position": "COO @ Pied Piper",
+            "date": "2015-02-01",
+            "picture": "https://pbs.twimg.com/profile_images/461277151514222593/xYCOja56_400x400.jpeg",
             "reference": "It is my pleasure to recommend Richard. That is all."
+        }
+    ],
+    "certifications": [
+        {
+            "title": "Proffesional Cloud Developer",
+            "logo": "https://s3.amazonaws.com/heysummit-production/media/thumbnails/uploads/events/bluoodigital-spring-chatbot-summit/nVRuKvWJSJ5ZjketvccFbe_square_large.png",
+            "date": "2016-11-01",
+            "awarder": "Google"
         }
     ]
 }

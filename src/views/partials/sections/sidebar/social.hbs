@@ -1,17 +1,23 @@
 {{#if resume.basics.profiles.length}}
     <section class="section-contact">
         {{> components/title icon='network' title='Social'}}
-        <ul>
-            {{#each resume.basics.profiles}}
-                <li class="icon-item clearfix">
-                    <svg class="text-primary">
-                        <use xlink:href="#{{sanitizeLowercase network}}"></use>
-                    </svg>
-                    <a href="{{url}}">
-                        {{removeSchema url}}
-                    </a>
-                </li>
-            {{/each}}
-        </ul>
+        <div class="card">
+            <div class="card-block">
+                <div class="card-body">
+                    <ul>
+                        {{#each resume.basics.profiles}}
+                            <li class="icon-item clearfix">
+                                <svg class="text-primary">
+                                    <use xlink:href="#{{sanitizeLowercase network}}"></use>
+                                </svg>
+                                <a href="{{url}}">
+                                    {{removeSchema url}}
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 {{/if}}

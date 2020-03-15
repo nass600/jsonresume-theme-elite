@@ -4,31 +4,32 @@
 
         {{#each resume.certifications}}
             <div class="card">
-                {{#if date}}
-                    <div class="card-header">
-                        <span class="card-text card-dates">
-                            <span class="date-range">
-                                {{formatDate date}}
-                            </span>
-                            {{#if ../themeConfig.certificationDateSince}}
-                                <span class="duration">
-                                    ({{dateAgo date}})
-                                </span>
+                <div class="card-block">
+                    {{#if title}}
+                        <div class="card-header">
+                            <h4 class="card-title">
+                                {{title}}
+                                {{#if awarder}}
+                                    <span class="card-subtitle">{{awarder}}</span>
+                                {{/if}}
+                            </h4>
+                            {{#if date}}
+                                <div class="card-caption">
+                                    <span class="card-text card-dates">
+                                        <span class="date-range">
+                                            {{formatDate date}}
+                                        </span>
+                                        {{#if ../themeConfig.certificationDateSince}}
+                                            <span class="duration">
+                                                ({{dateAgo date}})
+                                            </span>
+                                        {{/if}}
+                                    </span>
+                                </div>
                             {{/if}}
-                        </span>
-                    </div>
-                {{/if}}
-
-                {{#if title}}
-                    <div class="card-block">
-                        <h4 class="card-title">
-                            {{title}}
-                            {{#if awarder}}
-                                <span class="card-subtitle">{{awarder}}</span>
-                            {{/if}}
-                        </h4>
-                    </div>
-                {{/if}}
+                        </div>
+                    {{/if}}
+                </div>
             </div>
         {{/each}}
     </section>

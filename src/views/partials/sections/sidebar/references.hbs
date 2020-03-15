@@ -4,18 +4,32 @@
 
         {{#each resume.references}}
             <div class="card">
-                <div class="card-block">
-                    <h4 class="card-title">
-                        {{#if name}}
-                            {{name}}
-                        {{/if}}
-                    </h4>
-                    {{#if reference}}
-                        <div class="card-text text-secondary hyphenate">
-                            {{reference}}
+                {{#if name}}
+                    <div class="card-block">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                {{name}}
+                                {{#if position}}
+                                    <span class="card-subtitle">{{position}}</span>
+                                {{/if}}
+                            </h3>
+                            {{#if date}}
+                                <div class="card-caption">
+                                    <span class="card-text card-dates">
+                                        <span class="date-range">
+                                            {{formatDate date}}
+                                        </span>
+                                    </span>
+                                </div>
+                            {{/if}}
                         </div>
-                    {{/if}}
-                </div>
+                        {{#if reference}}
+                            <div class="card-body text-secondary hyphenate">
+                                {{reference}}
+                            </div>
+                        {{/if}}
+                    </div>
+                {{/if}}
             </div>
         {{/each}}
     </section>
