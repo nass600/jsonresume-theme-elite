@@ -7,7 +7,7 @@
     "sidebarPublications": true,
     "sidebarCertifications": false,
     "sidebarReferences": false,
-    "sidebarVolunteer": true,
+    "sidebarVolunteer": false,
     "workDuration": true,
     "educationDuration": true,
     "volunteerDuration": false,

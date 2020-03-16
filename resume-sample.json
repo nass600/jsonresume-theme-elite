@@ -88,29 +88,45 @@
         ]
     },
     "work": [
-        {
-            "company": "Pied Piper",
-            "logo": "https://ih0.redbubble.net/image.538431154.1686/ap,550x550,12x12,1,transparent,t.u2.png",
-            "position": "CEO/President",
-            "website": "http://piedpiper.com",
-            "startDate": "2014-04-13",
-            "summary": "<ul><li>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</li><li>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</li></ul>",
-            "highlights": [
-                "PHPUnit",
-                "ElasticSearch",
-                "Symfony",
-                "Java",
-                "iOS",
-                "Scrum",
-                "PostgreSQL",
-                "MongoDB",
-                "Tabs"
-            ]
-        },
+        [
+            {
+                "company": "Pied Piper",
+                "logo": "https://ih0.redbubble.net/image.538431154.1686/ap,550x550,12x12,1,transparent,t.u2.png",
+                "position": "CEO",
+                "website": "http://piedpiper.com",
+                "startDate": "2016-07-01",
+                "summary": "<ul><li>Grow the company to more than 1K employees and achieved Seried D round and a final exit of 2B$ dollars.</li><li>Partner with multiple providers which helped growing sales a 50%</li></ul>",
+                "highlights": [
+                    "Management",
+                    "Agile",
+                    "Sales"
+                ]
+            },
+            {
+                "company": "Pied Piper",
+                "logo": "https://ih0.redbubble.net/image.538431154.1686/ap,550x550,12x12,1,transparent,t.u2.png",
+                "position": "CTO",
+                "website": "http://piedpiper.com",
+                "startDate": "2014-04-13",
+                "endDate": "2016-07-01",
+                "summary": "<ul><li>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</li></ul>",
+                "highlights": [
+                    "PHPUnit",
+                    "ElasticSearch",
+                    "Symfony",
+                    "Java",
+                    "iOS",
+                    "Scrum",
+                    "PostgreSQL",
+                    "MongoDB",
+                    "Tabs"
+                ]
+            }
+        ],
         {
             "company": "Hooli",
             "logo": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/022018/hooli.jpg?g0WbCOl20sZupevIewoHqF5g3uC9ZNCP&itok=09Zgymrh",
-            "position": "Software Engineer",
+            "position": "Senior Software Engineer",
             "website": "http://www.hooli.xyz/",
             "startDate": "2013-01-01",
             "endDate": "2014-04-06",
@@ -143,11 +159,13 @@
             "logo": "https://identity.stanford.edu/img/SU_SealColor_web9.png",
             "area": "Computer Science",
             "studyType": "B.S",
-            "startDate": "2011-06-01",
+            "startDate": "2009-06-01",
+            "endDate": "2012-12-30",
             "gpa": "GPA 4.0",
             "courses": [
                 "DB1101 - Basic SQL",
-                "CS2011 - Java Introduction"
+                "CS2011 - Java Introduction",
+                "MA2010 - Advanced Algorythms"
             ]
         }
     ],
