@@ -14,7 +14,9 @@
                         {{#if resume.basics.phone}}
                             <li class="icon-item clearfix">
                                 <svg class="text-primary"><use xlink:href="#phone"></use></svg>
-                                <span>{{resume.basics.phone}}</span>
+                                <a href="tel:{{resume.basics.phone}}">
+                                    {{resume.basics.phone}}
+                                </a>
                             </li>
                         {{/if}}
                         {{#if resume.basics.website}}
