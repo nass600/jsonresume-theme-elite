@@ -49,6 +49,14 @@
 .section-basic {
   text-align: center;
   background-color: darken($sidebar-bg, 5%);
+  background-size: cover;
+  background-position: center;
+  background-size: 130%;
+
+  .overlay {
+    position: absolute;
+    width: $sidebar-width;
+  }
 
   .avatar {
     border-radius: 50%;
@@ -65,7 +73,7 @@
   }
 
   .name {
-    margin: 1rem auto;
+    margin: $spacer auto;
   }
 }
 

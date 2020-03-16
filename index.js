@@ -54,6 +54,9 @@ handlebars.registerHelper({
     }
 
     return accum
+  },
+  isArray: function (item) {
+    return Array.isArray(item);
   }
 })
 

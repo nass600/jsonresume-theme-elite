@@ -1,5 +1,9 @@
 {{#if resume.basics}}
-    <section class="section-basic">
+    <section class="section-basic"
+        {{#if resume.basics.background}}
+            style="background-image: url({{resume.basics.background}})"
+        {{/if}}
+    >
         {{#if themeConfig.avatar}}
             {{#if resume.basics.picture}}
                 <div class="avatar">
@@ -15,9 +19,9 @@
         {{/if}}
 
         {{#if resume.basics.label}}
-            <h3 class="subtitle text-uppercase">
+            <h2 class="subtitle text-uppercase">
                 {{resume.basics.label}}
-            </h3>
+            </h2>
         {{/if}}
     </section>
 {{/if}}

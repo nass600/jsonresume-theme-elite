@@ -29,17 +29,19 @@
 }
 
 .card-aside {
+  position: relative;
+  width: $card-image-size;
+
   & + .card-block {
     margin-left: $spacer/2;
   }
 }
 
 .card-image {
-  width: $card-image-size;
-  height: $card-image-size;
   border-radius: 50%;
-  background-color: darken($page-bg, 4%);
+  background-color: $page-tertiary;
   overflow: hidden;
+  position: relative;
 
   img {
     max-width: 100%;
@@ -145,5 +147,52 @@
 
   tr + tr td {
     padding-top: $spacer/2;
+  }
+}
+
+.card-group {
+  .card {
+    .card-aside::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: -$spacer;
+      left: 50%;
+      width: $timeline-thick;
+      margin-left: -($timeline-thick/2);
+      background-color: $timeline-color;
+    }
+
+    & + .card {
+      .card-aside { 
+        &::before {
+          top: -$spacer;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: $timeline-dots-size;
+          height: $timeline-dots-size;
+          border: $timeline-thick solid $timeline-color;
+          border-radius: 50%;
+          background-color: $page-bg;
+          top: $card-image-size/2 - $timeline-dots-size/2 - $timeline-thick;
+          left: 50%;
+          margin-left: -($timeline-dots-size/2);
+
+        }
+      }
+
+      .card-image {
+        display: none;
+      }
+    }
+
+    &.card-last {
+      .card-aside::before {
+        bottom: 95%;
+      }
+    }
   }
 }

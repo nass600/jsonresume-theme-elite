@@ -2,74 +2,15 @@
     <section class="section-work">
         {{> components/title icon='briefcase' title='Experience'}}
         {{#each resume.work}}
-            <div class="card">
-                {{#if logo}}
-                    <div class="card-aside">
-                        <div class="card-image">
-                            <img src="{{logo}}" alt="{{company}}">
-                        </div>
-                    </div>
-                {{/if}}
-                <div class="card-block">
-                    <div class="card-header">
-                        {{#if position}}
-                            <h3 class="card-title">
-                                {{position}}
-                                {{#if company}}
-                                    <span class="card-subtitle">{{company}}</span>
-                                {{/if}}
-                            </h3>
-                        {{/if}}
-                        {{#if startDate}}
-                            <div class="card-caption">
-                                <span class="card-text card-dates">
-                                    <span class="date-range">
-                                        {{formatDate startDate}} - {{formatDate endDate}}
-                                    </span>
-                                    {{#if ../themeConfig.workDuration}}
-                                        <span class="duration">
-                                            ({{dateDiff startDate endDate}})
-                                        </span>
-                                    {{/if}}
-                                </span>
-                                {{#unless endDate}}
-                                    <span class="badge badge-success">current</span>
-                                {{/unless}}
-                            </div>
-                        {{/if}}
-                    </div>
-
-                    {{#if position}}
-                        {{#if summary}}
-                            <div class="card-body">{{{summary}}}</div>
-                        {{/if}}
-                    {{/if}}
-                    {{#or highlights.length website}}
-                        <div class="card-footer">
-                            {{#if website}}
-                                <a class="card-link icon-item text-secondary" href="{{website}}">
-                                    <svg class="text-primary">
-                                        <use xlink:href="#link"></use>
-                                    </svg>
-                                    <span>{{website}}</span>
-                                </a>
-                            {{/if}}
-                            {{#if highlights}}
-                            <div class="card-tags icon-item" href="{{website}}">
-                                <svg class="text-primary">
-                                    <use xlink:href="#tags"></use>
-                                </svg>
-                                <div class="tag-list">
-                                {{#each highlights}}
-                                    <span class="tag text-secondary">{{this}}</span>
-                                {{/each}}
-                                </div>
-                            </div>
-                            {{/if}}
-                        </div>
-                    {{/or}}
+            {{#if (isArray @this)}}
+                <div class="card-group">
+                    {{#each @this}}
+                        {{> sections/content/work-item }}
+                    {{/each}}
                 </div>
-            </div>
+            {{else}}
+                {{> sections/content/work-item }}
+            {{/if}}
         {{/each}}
     </section>
 {{/if}}
