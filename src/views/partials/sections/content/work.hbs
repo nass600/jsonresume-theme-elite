@@ -5,11 +5,11 @@
             {{#if (isArray @this)}}
                 <div class="card-group">
                     {{#each @this}}
-                        {{> sections/content/work-item }}
+                        {{> sections/content/work-item themeConfig=../../themeConfig }}
                     {{/each}}
                 </div>
             {{else}}
-                {{> sections/content/work-item }}
+                {{> sections/content/work-item themeConfig=../themeConfig }}
             {{/if}}
         {{/each}}
     </section>
