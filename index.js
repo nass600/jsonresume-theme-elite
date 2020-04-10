@@ -19,7 +19,9 @@ handlebars.registerHelper({
   dateDiff: function (startDate, endDate) {
     let text = ''
     startDate = startDate ? moment(startDate) : moment()
+    startDate.startOf('month')
     endDate = endDate ? moment(endDate) : moment()
+    endDate.add(1, 'month').startOf('month')
     let years = endDate.diff(startDate, 'years')
     startDate.add(years, 'years')
     let months = endDate.diff(startDate, 'months')

@@ -12,6 +12,7 @@ body {
   display: flex;
   margin: 0 auto;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  font-size: $font-size-base;
 
   .sidebar {
     background-color: $sidebar-bg;
@@ -33,7 +34,6 @@ body {
     .watermark {
       $watermark-height: 12px;
 
-      opacity: 0.7;
       position: absolute;
       top: $spacer;
       right: $padding-x;
@@ -61,7 +61,7 @@ body {
   }
   
   [class^="section-"] .title {
-    $icon-bg-size: 28px;
+    $icon-bg-size: 24.02px;
   
     text-transform: uppercase;
     padding: $spacer $padding-x 0;
@@ -70,7 +70,7 @@ body {
     align-items: center;
   
     span {
-      margin-left: 0.25rem;
+      margin-left: $spacer/2;
       line-height: 1;
     }
   

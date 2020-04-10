@@ -13,8 +13,10 @@ $page-color: #292b2c;
 $page-primary: $color-primary;
 $page-secondary: $color-secondary;
 $page-tertiary: darken($page-bg, 4%);
+$timeline-color: darken($page-bg, 10%);
 
 $sidebar-bg: #242324;
+$sidebar-basic-bg: darken($sidebar-bg, 5%);
 $sidebar-color: white;
 $sidebar-primary: $color-primary;
 $sidebar-secondary: lighten($color-secondary, 10%);
@@ -60,7 +62,7 @@ $el-bitbucket: "\e159";
 // Font Sizes
 
 $font-family-sans-serif: 'Maven Pro', sans-serif;
-$font-size-base: 0.6rem;
+$font-size-base: 0.563rem;
 $h1-font-size: $font-size-base * 1.6;
 $h2-font-size: $font-size-base * 1.4;
 $h3-font-size: $font-size-base * 1.15;
@@ -102,4 +104,3 @@ $card-image-size: 26px;
 $flag-size: 1rem;
 $timeline-thick: 2px;
 $timeline-dots-size: 10px + $timeline-thick;
-$timeline-color: darken($page-bg, 10%);

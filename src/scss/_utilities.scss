@@ -31,6 +31,26 @@
   }
 }
 
+.border-primary {
+  .sidebar & {
+    border-color: $sidebar-primary !important;
+  }
+
+  .content & {
+    border-color: $page-primary !important;
+  }
+}
+
+.border-secondary {
+  .sidebar & {
+    border-color: $sidebar-secondary !important;
+  }
+
+  .content & {
+    border-color: $page-secondary !important;
+  }
+}
+
 .text-italic {
   font-style: italic;
 }

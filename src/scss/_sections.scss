@@ -48,7 +48,7 @@
 
 .section-basic {
   text-align: center;
-  background-color: darken($sidebar-bg, 5%);
+  background-color: $sidebar-basic-bg;
   background-size: cover;
   background-position: center;
   background-size: 130%;
@@ -64,7 +64,7 @@
     margin: 0 auto 1rem;
     width: $avatar-size;
     height: $avatar-size;
-    background-color: darken($sidebar-bg, 5%);
+    background-color: $sidebar-basic-bg;
 
     img {
       width: $avatar-size;

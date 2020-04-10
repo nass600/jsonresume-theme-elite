@@ -12,12 +12,12 @@
                 <h3 class="card-title">
                     {{position}}
                     {{#if company}}
-                        <span class="card-subtitle">{{company}}</span>
+                        <span class="card-subtitle text-secondary">{{company}}</span>
                     {{/if}}
                 </h3>
             {{/if}}
             {{#if startDate}}
-                <div class="card-caption">
+                <div class="card-caption text-secondary">
                     <span class="card-text card-dates">
                         <span class="date-range">
                             {{formatDate startDate}} - {{formatDate endDate}}

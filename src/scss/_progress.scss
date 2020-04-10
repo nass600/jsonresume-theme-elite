@@ -14,7 +14,9 @@
     height: $size;
     display: inline-block;
     border-radius: 50%;
-    border: 1px solid $color-secondary;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-secondary;
     vertical-align: sub;
 
     &.active {

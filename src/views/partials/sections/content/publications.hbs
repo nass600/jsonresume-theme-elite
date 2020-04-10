@@ -17,12 +17,12 @@
                             <h3 class="card-title">
                                 {{name}}
                                 {{#if publisher}}
-                                    <span class="card-subtitle">{{publisher}}</span>
+                                    <span class="card-subtitle text-secondary">{{publisher}}</span>
                                 {{/if}}
                             </h3>
                         {{/if}}
                         {{#if releaseDate}}
-                            <div class="card-caption">
+                            <div class="card-caption text-secondary">
                                 <span class="card-text card-dates">
                                     {{formatDate releaseDate}} ({{dateAgo releaseDate}})
                                 </span>
