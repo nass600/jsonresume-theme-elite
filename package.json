@@ -71,7 +71,7 @@
     "gulp-svgmin": "^1.2.4",
     "handlebars": "^4.0.5",
     "handlebars-wax": "^4.0.0",
-    "html-pdf": "^2.1.0",
+    "html-pdf": "^3.0.1",
     "moment": "^2.17.1",
     "pluralize": "^4.0.0",
     "swag": "^0.7.0"
